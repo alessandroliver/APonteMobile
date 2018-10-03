@@ -2,7 +2,7 @@ package com.example.alessandro.apontemobile.modelo;
 
 import java.util.Date;
 
-public class Pessoa {
+public abstract class Pessoa {
     private String nome;
     private String naturalidade;
     private int celular;
@@ -16,7 +16,8 @@ public class Pessoa {
     private String cidade;
     private String uf;
 
-    public Pessoa(String nome, String naturalidade, int celular, Date nascimento, String sexo, float altura, String logradouro, int numero, String bairro, String cep, String cidade, String uf) {
+    public Pessoa(String nome, String naturalidade, int celular, Date nascimento, String sexo, float altura,
+                  String logradouro, int numero, String bairro, String cep, String cidade, String uf) {
         this.nome = nome;
         this.naturalidade = naturalidade;
         this.celular = celular;
