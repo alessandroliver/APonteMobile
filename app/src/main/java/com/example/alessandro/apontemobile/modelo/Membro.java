@@ -9,10 +9,12 @@ public class Membro extends Pessoa {
     private Date data_ponte;
     private String cargo;
     private String gr;
+    private String colete;
 
     public Membro(String nome, String naturalidade, int celular, Date nascimento, String sexo, float altura,
                   String logradouro, int numero, String bairro, String cep, String cidade, String uf,
-                  Date data_conversao, String equipe, double tempo_ponte, Date data_ponte, String cargo, String gr) {
+                  Date data_conversao, String equipe, double tempo_ponte, Date data_ponte, String cargo, String gr,
+                  String colete) {
         super(nome, naturalidade, celular, nascimento, sexo, altura, logradouro, numero, bairro, cep, cidade, uf);
         this.data_conversao = data_conversao;
         this.equipe = equipe;
@@ -20,6 +22,8 @@ public class Membro extends Pessoa {
         this.data_ponte = data_ponte;
         this.cargo = cargo;
         this.gr = gr;
+        this.colete = colete;
+
     }
 
     public Date getData_conversao() {
@@ -68,6 +72,14 @@ public class Membro extends Pessoa {
 
     public void setGr(String gr) {
         this.gr = gr;
+    }
+
+    public String getColete() {
+        return colete;
+    }
+
+    public void setColete(String colete) {
+        this.colete = colete;
     }
 
 }
