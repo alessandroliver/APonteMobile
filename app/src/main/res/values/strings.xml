@@ -1,10 +1,16 @@
 <resources>
-    <string name="app_name">APonteMobile</string>
+    <string name="app_name">A Ponte Mobile</string>
     <string name="title_activity_inicial">InicialActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="nav_header_desc">Cabeçalho de navegação</string>
+    <string name="action_settings">Configurações</string>
+    <string name="title_activity_membro">Membresia</string>
+    <string name="title_activity_voluntario">Voluntário</string>
+    <string name="title_activity_aluno">Aluno</string>
+    <string name="title_activity_programacao">Programação</string>
+    <string name="title_activity_cafe">Ponte Café</string>
+    <string name="title_activity_shop">Ponte Shop</string>
 </resources>
