@@ -1,18 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InicioActivity">
+    tools:context=".InicioActivity"
+    android:paddingTop="16sp"
+    android:paddingBottom="16sp"
+    android:paddingLeft="60sp"
+    android:paddingRight="60sp"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/somos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seções"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/membro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Membro"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimaryPonte"
+        android:layout_below="@+id/somos"
+        android:layout_marginTop="50sp"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/voluntario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/membro"
+        android:layout_alignEnd="@+id/somos"
+        android:layout_marginTop="-48dp"
+        android:background="@color/colorPrimaryPonte"
+        android:text="Voluntário"
+        android:textColor="#ffffff"
+        android:layout_alignRight="@+id/somos" />
+
+    <Button
+        android:id="@+id/aluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aluno"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimaryPonte"
+        android:layout_below="@+id/voluntario"
+        android:layout_marginTop="30sp"
+        />
+
+    <Button
+        android:id="@+id/funcionario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aluno"
+        android:layout_alignEnd="@+id/somos"
+        android:layout_alignRight="@+id/somos"
+        android:layout_marginTop="-48dp"
+        android:background="@color/colorPrimaryPonte"
+        android:text="Funcionário"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ponte Shop"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimaryPonte"
+        android:layout_below="@+id/funcionario"
+        android:layout_marginTop="30sp"
+        />
+
+    <Button
+        android:id="@+id/cafe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shop"
+        android:layout_marginTop="-48dp"
+        android:background="@color/colorPrimaryPonte"
+        android:text="Ponte Café"
+        android:textColor="#ffffff"
+        android:layout_alignRight="@+id/somos" />
+
+    <Button
+        android:id="@+id/gr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GR"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimaryPonte"
+        android:layout_below="@+id/cafe"
+        android:layout_marginTop="30sp"
+        />
+
+    <Button
+        android:id="@+id/material"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gr"
+        android:layout_alignEnd="@+id/somos"
+        android:layout_marginTop="-48dp"
+        android:background="@color/colorPrimaryPonte"
+        android:text="Material"
+        android:textColor="#ffffff"
+        android:layout_alignRight="@+id/somos" />
+
+</RelativeLayout>

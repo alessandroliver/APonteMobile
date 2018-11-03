@@ -23,8 +23,16 @@
             android:name=".InicialActivity"
             android:label="@string/title_activity_inicial"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MembroActivity"
-            android:label="@string/title_activity_membro"></activity>
+        <activity
+            android:name=".MembroActivity"
+            android:label="@string/title_activity_membro" />
+        <activity android:name=".VoluntarioActivity" />
+        <activity android:name=".AlunoActivity" />
+        <activity android:name=".FuncionarioActivity" />
+        <activity android:name=".ShopActivity" />
+        <activity android:name=".CafeActivity" />
+        <activity android:name=".GrActivity" />
+        <activity android:name=".MaterialActivity"></activity>
     </application>
 
 </manifest>
