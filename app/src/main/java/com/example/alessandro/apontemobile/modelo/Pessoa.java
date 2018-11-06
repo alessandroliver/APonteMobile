@@ -2,7 +2,7 @@ package com.example.alessandro.apontemobile.modelo;
 
 import java.util.Date;
 
-public abstract class Pessoa {
+public class Pessoa {
     private String nome;
     private String naturalidade;
     private int celular;
