@@ -1,6 +1,7 @@
 package com.example.alessandro.apontemobile.modelo;
 
 import java.util.Date;
+import java.util.List;
 
 public class Membro extends Pessoa {
     private Date data_conversao;
@@ -8,12 +9,12 @@ public class Membro extends Pessoa {
     private double tempo_ponte;
     private Date data_ponte;
     private String cargo;
-    private String gr;
+    private List<Gr> gr;
     private String colete;
 
     public Membro(String nome, String naturalidade, int celular, Date nascimento, String sexo, float altura,
                   String logradouro, int numero, String bairro, String cep, String cidade, String uf,
-                  Date data_conversao, String equipe, double tempo_ponte, Date data_ponte, String cargo, String gr,
+                  Date data_conversao, String equipe, double tempo_ponte, Date data_ponte, String cargo, List<Gr> gr,
                   String colete) {
         super(nome, naturalidade, celular, nascimento, sexo, altura, logradouro, numero, bairro, cep, cidade, uf);
         this.data_conversao = data_conversao;
@@ -66,11 +67,11 @@ public class Membro extends Pessoa {
         this.cargo = cargo;
     }
 
-    public String getGr() {
+    public List<Gr> getGr() {
         return gr;
     }
 
-    public void setGr(String gr) {
+    public void setGr(List<Gr> gr) {
         this.gr = gr;
     }
 
