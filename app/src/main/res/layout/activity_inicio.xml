@@ -112,4 +112,26 @@
         android:textColor="#ffffff"
         android:layout_alignRight="@+id/somos" />
 
+    <Button
+        android:id="@+id/curso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/material"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimaryPonte"
+        android:text="Curso"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/sair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/curso"
+        android:layout_alignEnd="@+id/somos"
+        android:layout_alignRight="@+id/somos"
+        android:layout_marginTop="-48dp"
+        android:background="@color/colorPrimaryPonte"
+        android:text="Sair"
+        android:textColor="#ffffff" />
+
 </RelativeLayout>

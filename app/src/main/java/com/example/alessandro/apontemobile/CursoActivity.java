@@ -6,21 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class GrActivity extends AppCompatActivity {
+public class CursoActivity extends AppCompatActivity {
 
-    private Button maisGr;
+    private Button maisCurso;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gr);
+        setContentView(R.layout.activity_curso);
 
-        maisGr = findViewById(R.id.add_gr);
+        maisCurso = findViewById(R.id.add_curso);
 
-        maisGr.setOnClickListener(new View.OnClickListener() {
+        maisCurso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GrActivity.this, MaisGrActivity.class);
+                Intent intent = new Intent(CursoActivity.this, MaisCursoActivity.class);
                 startActivity(intent);
             }
         });

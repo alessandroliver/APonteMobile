@@ -7,10 +7,14 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Cabeçalho de navegação</string>
     <string name="action_settings">Configurações</string>
-    <string name="title_activity_membro">Membresia</string>
-    <string name="title_activity_voluntario">Voluntário</string>
     <string name="title_activity_aluno">Aluno</string>
-    <string name="title_activity_programacao">Programação</string>
     <string name="title_activity_cafe">Ponte Café</string>
+    <string name="title_activity_curso">Cursos</string>
+    <string name="title_activity_funcionario">Funcionários</string>
+    <string name="title_activity_gr">Grupos de Relacionamento</string>
+    <string name="title_activity_material">Material</string>
+    <string name="title_activity_membro">Membresia</string>
     <string name="title_activity_shop">Ponte Shop</string>
+    <string name="title_activity_voluntario">Voluntariado</string>
+    <string name="title_activity_programacao">Programação</string>
 </resources>

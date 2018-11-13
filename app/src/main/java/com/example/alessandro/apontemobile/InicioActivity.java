@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class InicioActivity extends AppCompatActivity {
 
-    private Button membro, voluntario, aluno, funcionario, shop, cafe, gr, material;
+    private Button membro, voluntario, aluno, funcionario, shop, cafe, gr, material, curso, sair;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,8 @@ public class InicioActivity extends AppCompatActivity {
         cafe = findViewById(R.id.cafe);
         gr = findViewById(R.id.gr);
         material = findViewById(R.id.material);
+        curso = findViewById(R.id.curso);
+        sair = findViewById(R.id.sair);
 
         membro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +82,18 @@ public class InicioActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        curso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InicioActivity.this, CursoActivity.class);
+                startActivity(intent);
+            }
+        });
+        sair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

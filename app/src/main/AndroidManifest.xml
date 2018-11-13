@@ -20,19 +20,41 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".InicialActivity"
-            android:label="@string/title_activity_inicial"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".MembroActivity"
             android:label="@string/title_activity_membro" />
-        <activity android:name=".VoluntarioActivity" />
-        <activity android:name=".AlunoActivity" />
-        <activity android:name=".FuncionarioActivity" />
-        <activity android:name=".ShopActivity" />
-        <activity android:name=".CafeActivity" />
-        <activity android:name=".GrActivity" />
-        <activity android:name=".MaterialActivity"></activity>
+        <activity
+            android:name=".VoluntarioActivity"
+            android:label="@string/title_activity_voluntario" />
+        <activity
+            android:name=".AlunoActivity"
+            android:label="@string/title_activity_aluno" />
+        <activity
+            android:name=".FuncionarioActivity"
+            android:label="@string/title_activity_funcionario" />
+        <activity
+            android:name=".ShopActivity"
+            android:label="@string/title_activity_shop" />
+        <activity
+            android:name=".CafeActivity"
+            android:label="@string/title_activity_cafe" />
+        <activity
+            android:name=".GrActivity"
+            android:label="@string/title_activity_gr" />
+        <activity
+            android:name=".MaterialActivity"
+            android:label="@string/title_activity_material" />
+        <activity android:name=".MaisAlunoActivity" />
+        <activity android:name=".MaisCafeActivity" />
+        <activity android:name=".MaisFuncionarioActivity" />
+        <activity android:name=".MaisGrActivity" />
+        <activity android:name=".MaisMaterialActivity" />
+        <activity android:name=".MaisMembroActivity" />
+        <activity android:name=".MaisShopActivity" />
+        <activity android:name=".MaisVoluntarioActivity" />
+        <activity
+            android:name=".CursoActivity"
+            android:label="@string/title_activity_curso" />
+        <activity android:name=".MaisCursoActivity"></activity>
     </application>
 
 </manifest>

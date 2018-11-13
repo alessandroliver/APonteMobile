@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CafeActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titulo_aluno"
+        android:text="Lista de Produtos"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/add_cafe"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:text="+"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        android:elevation="6dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/btn_custom"
+        android:stateListAnimator="@null"/>
+
+</RelativeLayout>
