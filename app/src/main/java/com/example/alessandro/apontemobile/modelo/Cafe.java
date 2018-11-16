@@ -1,8 +1,10 @@
 package com.example.alessandro.apontemobile.modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Cafe extends Produtos {
+public class Cafe extends Produtos implements Serializable {
+    private Long id;
     private String sabor;
     private String temperatura;
     private String ingrediente;
@@ -11,15 +13,24 @@ public class Cafe extends Produtos {
     private double peso;
 
     public Cafe(String nome, double valor_compra, double valor_venda, int quantidade, String loja,
-                String local_fabricacao, Date data_compra, String marca, String sabor, String temperatura,
-                String ingrediente, int validade, int qtd_venda, double peso) {
+                String local_fabricacao, Date data_compra, String marca, String sabor, Long id,
+                String temperatura, String ingrediente, int validade, int qtd_venda, double peso) {
         super(nome, valor_compra, valor_venda, quantidade, loja, local_fabricacao, data_compra, marca);
+        this.id = id;
         this.sabor = sabor;
         this.temperatura = temperatura;
         this.ingrediente = ingrediente;
         this.validade = validade;
         this.qtd_venda = qtd_venda;
         this.peso = peso;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getSabor() {
@@ -68,5 +79,10 @@ public class Cafe extends Produtos {
 
     public void setPeso(double peso) {
         this.peso = peso;
+    }
+
+    @Override
+    public String toString() {
+        return getId() + " - " + getNome();
     }
 }

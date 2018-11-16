@@ -1,22 +1,27 @@
 package com.example.alessandro.apontemobile.modelo;
 
+import java.io.Serializable;
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Membro extends Pessoa {
+public class Membro extends Pessoa implements Serializable {
+    private Long id;
     private Date data_conversao;
     private String equipe;
     private double tempo_ponte;
     private Date data_ponte;
     private String cargo;
-    private List<Gr> gr;
+    private ArrayList<Gr> gr;
     private String colete;
 
     public Membro(String nome, String naturalidade, int celular, Date nascimento, String sexo, float altura,
-                  String logradouro, int numero, String bairro, String cep, String cidade, String uf,
-                  Date data_conversao, String equipe, double tempo_ponte, Date data_ponte, String cargo, List<Gr> gr,
-                  String colete) {
+                  String logradouro, int numero, String bairro, String cep, String cidade, String uf, Long id,
+                  Date data_conversao, String equipe, double tempo_ponte, Date data_ponte, String cargo,
+                  ArrayList<Gr> gr, String colete) {
         super(nome, naturalidade, celular, nascimento, sexo, altura, logradouro, numero, bairro, cep, cidade, uf);
+        this.id = id;
         this.data_conversao = data_conversao;
         this.equipe = equipe;
         this.tempo_ponte = tempo_ponte;
@@ -25,6 +30,14 @@ public class Membro extends Pessoa {
         this.gr = gr;
         this.colete = colete;
 
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Date getData_conversao() {
@@ -67,11 +80,11 @@ public class Membro extends Pessoa {
         this.cargo = cargo;
     }
 
-    public List<Gr> getGr() {
+    public ArrayList<Gr> getGr() {
         return gr;
     }
 
-    public void setGr(List<Gr> gr) {
+    public void setGr(ArrayList<Gr> gr) {
         this.gr = gr;
     }
 
@@ -81,6 +94,11 @@ public class Membro extends Pessoa {
 
     public void setColete(String colete) {
         this.colete = colete;
+    }
+
+    @Override
+    public String toString() {
+        return getId() + " - " + getNome();
     }
 
 }

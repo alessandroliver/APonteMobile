@@ -1,9 +1,13 @@
 package com.example.alessandro.apontemobile.modelo;
 
+import java.io.Serializable;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Curso {
+public class Curso implements Serializable {
+    private Long id;
     private String nome;
     private Date inicio;
     private Date fim;
@@ -13,10 +17,10 @@ public class Curso {
     private double pegar;
     private double largar;
     private String sala;
-    private List<Aluno> aluno;
 
-    public Curso(String nome, Date inicio, Date fim, int carga_horaria, String professor, String dia, double pegar,
-                 double largar, String sala, List<Aluno> aluno) {
+    public Curso(Long id, String nome, Date inicio, Date fim, int carga_horaria, String professor, String dia,
+                 double pegar, double largar, String sala) {
+        this.id = id;
         this.nome = nome;
         this.inicio = inicio;
         this.fim = fim;
@@ -26,7 +30,14 @@ public class Curso {
         this.pegar = pegar;
         this.largar = largar;
         this.sala = sala;
-        this.aluno = aluno;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -101,12 +112,9 @@ public class Curso {
         this.sala = sala;
     }
 
-    public List<Aluno> getAluno() {
-        return aluno;
-    }
-
-    public void setAluno(List<Aluno> aluno) {
-        this.aluno = aluno;
+    @Override
+    public String toString() {
+        return getId() + " - " + getNome();
     }
 
 }

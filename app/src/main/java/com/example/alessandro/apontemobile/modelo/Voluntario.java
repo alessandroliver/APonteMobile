@@ -1,8 +1,10 @@
 package com.example.alessandro.apontemobile.modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Voluntario extends Pessoa {
+public class Voluntario extends Pessoa implements Serializable {
+    private Long id;
     private String funcao;
     private double horario_pegar;
     private double horario_largar;
@@ -15,10 +17,11 @@ public class Voluntario extends Pessoa {
 
 
     public Voluntario(String nome, String naturalidade, int celular, Date nascimento, String sexo, float altura,
-                      String logradouro, int numero, String bairro, String cep, String cidade, String uf, String funcao,
-                      double horario_pegar, double horario_largar, double expediente, double hora_semanal,
-                      String tamanho_camisa, int cpf, int rg, String area) {
+                      String logradouro, int numero, String bairro, String cep, String cidade, String uf, Long id,
+                      String funcao, double horario_pegar, double horario_largar, double expediente,
+                      double hora_semanal, String tamanho_camisa, int cpf, int rg, String area) {
         super(nome, naturalidade, celular, nascimento, sexo, altura, logradouro, numero, bairro, cep, cidade, uf);
+        this.id = id;
         this.funcao = funcao;
         this.horario_pegar = horario_pegar;
         this.horario_largar = horario_largar;
@@ -28,6 +31,14 @@ public class Voluntario extends Pessoa {
         this.cpf = cpf;
         this.rg = rg;
         this.area = area;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFuncao() {
@@ -100,5 +111,10 @@ public class Voluntario extends Pessoa {
 
     public void setArea(String area) {
         this.area = area;
+    }
+
+    @Override
+    public String toString() {
+        return getId() + " - " + getNome();
     }
 }

@@ -1,8 +1,10 @@
 package com.example.alessandro.apontemobile.modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Material {
+public class Material implements Serializable {
+    private Long id;
     private String nome;
     private double valor;
     private String finalidade;
@@ -14,8 +16,9 @@ public class Material {
     private double peso;
     private double tamanho;
 
-    public Material(String nome, double valor, String finalidade, String garantia, String loja, Date data_compra,
-                    String validade, String tipo, double peso, double tamanho) {
+    public Material(Long id, String nome, double valor, String finalidade, String garantia, String loja,
+                    Date data_compra, String validade, String tipo, double peso, double tamanho) {
+        this.id = id;
         this.nome = nome;
         this.valor = valor;
         this.finalidade = finalidade;
@@ -26,6 +29,14 @@ public class Material {
         this.tipo = tipo;
         this.peso = peso;
         this.tamanho = tamanho;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -106,5 +117,10 @@ public class Material {
 
     public void setTamanho(double tamanho) {
         this.tamanho = tamanho;
+    }
+
+    @Override
+    public String toString() {
+        return getId() + " - " + getNome();
     }
 }

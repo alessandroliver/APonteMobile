@@ -1,8 +1,10 @@
 package com.example.alessandro.apontemobile.modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Funcionario extends Pessoa {
+public class Funcionario extends Pessoa implements Serializable {
+    private Long id;
     private String cargo;
     private float salario;
     private int hora_semanal;
@@ -18,10 +20,11 @@ public class Funcionario extends Pessoa {
     private Date pagamento;
 
     public Funcionario(String nome, String naturalidade, int celular, Date nascimento, String sexo, float altura,
-                       String logradouro, int numero, String bairro, String cep, String cidade, String uf, String cargo,
-                       float salario, int hora_semanal, int carteira_trabalho, int pis, int cpf, int rg, int conta,
-                       String banco, int agencia, String camisa, Date entrada, Date pagamento) {
+                       String logradouro, int numero, String bairro, String cep, String cidade, String uf, Long id,
+                       String cargo, float salario, int hora_semanal, int carteira_trabalho, int pis, int cpf,
+                       int rg, int conta, String banco, int agencia, String camisa, Date entrada, Date pagamento) {
         super(nome, naturalidade, celular, nascimento, sexo, altura, logradouro, numero, bairro, cep, cidade, uf);
+        this.id = id;
         this.cargo = cargo;
         this.salario = salario;
         this.hora_semanal = hora_semanal;
@@ -35,6 +38,14 @@ public class Funcionario extends Pessoa {
         this.camisa = camisa;
         this.entrada = entrada;
         this.pagamento = pagamento;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getCargo() {
@@ -139,5 +150,10 @@ public class Funcionario extends Pessoa {
 
     public void setPagamento(Date pagamento) {
         this.pagamento = pagamento;
+    }
+
+    @Override
+    public String toString() {
+        return getId() + " - " + getNome();
     }
 }

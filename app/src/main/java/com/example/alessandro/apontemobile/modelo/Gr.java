@@ -1,8 +1,10 @@
 package com.example.alessandro.apontemobile.modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Gr {
+public class Gr implements Serializable {
+    private Long id;
     private String nome;
     private int quantidade;
     private double horario;
@@ -19,9 +21,10 @@ public class Gr {
     private String cidade;
     private String uf;
 
-    public Gr(String nome, int quantidade, double horario, String dia, String frequencia, String lider, String apoio,
-              int contato, Date inauguracao, String logradouro, int numero, String bairro, String cep, String cidade,
-              String uf) {
+    public Gr(Long id, String nome, int quantidade, double horario, String dia, String frequencia, String lider,
+              String apoio, int contato, Date inauguracao, String logradouro, int numero, String bairro, String cep,
+              String cidade, String uf) {
+        this.id = id;
         this.nome = nome;
         this.quantidade = quantidade;
         this.horario = horario;
@@ -37,6 +40,14 @@ public class Gr {
         this.cep = cep;
         this.cidade = cidade;
         this.uf = uf;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -157,5 +168,10 @@ public class Gr {
 
     public void setUf(String uf) {
         this.uf = uf;
+    }
+
+    @Override
+    public String toString() {
+        return getId() + " - " + getNome();
     }
 }
