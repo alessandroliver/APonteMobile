@@ -1,9 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MaisAlunoActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titulo_aluno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Cadastrar Aluno"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/formulario_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo_aluno"
+            android:hint="Nome" />
+
+        <EditText
+            android:id="@+id/formulario_celular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/formulario_nome"
+            android:inputType="phone"
+            android:ems="10"
+            android:hint="Telefone" />
+
+        <EditText
+            android:id="@+id/formulario_nascimento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/formulario_nome"
+            android:ems="8"
+            android:hint="Data de nascimento"
+            android:layout_toRightOf="@+id/formulario_celular"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/formulario_altura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="6"
+            android:inputType="number"
+            android:layout_below="@+id/formulario_celular"
+            android:hint="Altura" />
+
+        <EditText
+            android:id="@+id/formulario_naturalidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:layout_below="@+id/formulario_celular"
+            android:layout_toRightOf="@+id/formulario_altura"
+            android:hint="Naturalidade" />
+
+        <RadioGroup
+            android:id="@+id/formulario_sexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/formulario_naturalidade"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="100dp">
+
+            <TextView
+                android:id="@+id/radio_sexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sexo"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radioM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Masculino" />
+
+            <RadioButton
+                android:id="@+id/radioF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Feminino" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/formulario_responsavel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/formulario_sexo"
+            android:hint="Responsável"/>
+
+        <EditText
+            android:id="@+id/formulario_logradouro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:layout_below="@+id/formulario_responsavel"
+            android:hint="Rua/ Avenida" />
+
+        <EditText
+            android:id="@+id/formulario_numero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/formulario_logradouro"
+            android:layout_below="@+id/formulario_responsavel"
+            android:ems="6"
+            android:inputType="number"
+            android:hint="Número" />
+
+        <EditText
+            android:id="@+id/formulario_bairro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_below="@+id/formulario_logradouro"
+            android:hint="Bairro" />
+
+        <EditText
+            android:id="@+id/formulario_cep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/formulario_logradouro"
+            android:ems="8"
+            android:hint="CEP"
+            android:layout_toRightOf="@+id/formulario_bairro"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/formulario_cidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/formulario_bairro"
+            android:ems="15"
+            android:hint="Cidade" />
+
+        <Spinner
+            android:id="@+id/sp_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/formulario_cidade"
+            android:layout_below="@+id/formulario_bairro" />
+
+        <Button
+            android:id="@+id/button_cursos"
+            android:text="Adicionar Curso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimaryPonte"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/formulario_cidade" />
+
+        <EditText
+            android:id="@+id/formulario_matricula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_cursos"
+            android:hint="Matrícula"
+            android:ems="15"
+            android:inputType="number" />
+
+        <Spinner
+            android:id="@+id/sp_farda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/formulario_matricula"
+            android:layout_below="@+id/button_cursos" />
+
+        <EditText
+            android:id="@+id/formulario_escola"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="13"
+            android:layout_below="@+id/formulario_matricula"
+            android:hint="Colégio/ Escola"/>
+
+        <EditText
+            android:id="@+id/formulario_serie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:layout_toRightOf="@+id/formulario_escola"
+            android:layout_below="@+id/formulario_matricula"
+            android:hint="Série"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/formulario_escola"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryPonte"
+            android:text="Cadastrar"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+
+</ScrollView>

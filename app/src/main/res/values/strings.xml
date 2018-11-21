@@ -17,4 +17,42 @@
     <string name="title_activity_shop">Ponte Shop</string>
     <string name="title_activity_voluntario">Voluntariado</string>
     <string name="title_activity_programacao">Programação</string>
+    <string-array name="states">
+        <item>"*UF"</item>
+        <item>"PE"</item>
+        <item>"AC"</item>
+        <item>"AL"</item>
+        <item>"AP"</item>
+        <item>"AM"</item>
+        <item>"BA"</item>
+        <item>"CE"</item>
+        <item>"DF"</item>
+        <item>"ES"</item>
+        <item>"GO"</item>
+        <item>"MA"</item>
+        <item>"MT"</item>
+        <item>"MS"</item>
+        <item>"MG"</item>
+        <item>"PA"</item>
+        <item>"PB"</item>
+        <item>"PR"</item>
+        <item>"PI"</item>
+        <item>"RJ"</item>
+        <item>"RN"</item>
+        <item>"RS"</item>
+        <item>"RO"</item>
+        <item>"RR"</item>
+        <item>"SC"</item>
+        <item>"SP"</item>
+        <item>"SE"</item>
+        <item>"TO"</item>
+    </string-array>
+    <string-array name="camisas">
+        <item>"*Tamanho"</item>
+        <item>"PP"</item>
+        <item>"P"</item>
+        <item>"M"</item>
+        <item>"G"</item>
+        <item>"GG"</item>
+    </string-array>
 </resources>

@@ -12,12 +12,11 @@ public class Aluno extends Pessoa implements Serializable {
     private String responsavel;
     private String serie;
     private String escola;
-    private Date data_matricula;
 
     public Aluno(String nome, String naturalidade, int celular, Date nascimento, String sexo, float altura,
                  String logradouro, int numero, String bairro, String cep, String cidade, String uf, Long id,
                  ArrayList<Curso> curso, int matricula, String farda, String responsavel, String serie,
-                 String escola, Date data_matricula) {
+                 String escola) {
         super(nome, naturalidade, celular, nascimento, sexo, altura, logradouro, numero, bairro, cep, cidade, uf);
         this.id = id;
         this.curso = curso;
@@ -26,7 +25,6 @@ public class Aluno extends Pessoa implements Serializable {
         this.responsavel = responsavel;
         this.serie = serie;
         this.escola = escola;
-        this.data_matricula = data_matricula;
     }
 
     public Long getId() {
@@ -83,14 +81,6 @@ public class Aluno extends Pessoa implements Serializable {
 
     public void setEscola(String escola) {
         this.escola = escola;
-    }
-
-    public Date getData_matricula() {
-        return data_matricula;
-    }
-
-    public void setData_matricula(Date data_matricula) {
-        this.data_matricula = data_matricula;
     }
 
     @Override
