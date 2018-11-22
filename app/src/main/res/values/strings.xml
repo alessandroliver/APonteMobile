@@ -18,7 +18,7 @@
     <string name="title_activity_voluntario">Voluntariado</string>
     <string name="title_activity_programacao">Programação</string>
     <string-array name="states">
-        <item>"*UF"</item>
+        <item>"UF"</item>
         <item>"PE"</item>
         <item>"AC"</item>
         <item>"AL"</item>
@@ -48,11 +48,17 @@
         <item>"TO"</item>
     </string-array>
     <string-array name="camisas">
-        <item>"*Tamanho"</item>
+        <item>""</item>
         <item>"PP"</item>
         <item>"P"</item>
         <item>"M"</item>
         <item>"G"</item>
         <item>"GG"</item>
+    </string-array>
+    <string-array name="coletes">
+        <item>""</item>
+        <item>"P"</item>
+        <item>"M"</item>
+        <item>"G"</item>
     </string-array>
 </resources>

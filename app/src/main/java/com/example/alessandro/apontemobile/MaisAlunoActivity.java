@@ -7,10 +7,11 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MaisAlunoActivity extends AppCompatActivity {
 
-    private Button maisCurso;
+    private Button maisCurso, cadastrarAluno;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,8 @@ public class MaisAlunoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mais_aluno);
 
         maisCurso = findViewById(R.id.button_cursos);
+
+        cadastrarAluno = findViewById(R.id.button_cadastro_aluno);
 
         Spinner spStates = (Spinner) findViewById(R.id.sp_state);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -32,10 +35,24 @@ public class MaisAlunoActivity extends AppCompatActivity {
         maisCurso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MaisAlunoActivity.this, AlunoActivity.class);
+                Intent intent = new Intent(MaisAlunoActivity.this, PopActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cadastrarAluno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alert("Aluno cadastrado com sucesso!");
+                Intent intent = new Intent(MaisAlunoActivity.this, InicioActivity.class);
                 startActivity(intent);
             }
         });
 
     }
+
+    private void alert(String s){
+        Toast.makeText(this,s,Toast.LENGTH_LONG).show();
+    }
+
 }

@@ -1,9 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MaisVoluntarioActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titulo_voluntario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Cadastrar Voluntário"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/voluntario_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo_voluntario"
+            android:hint="Nome" />
+
+        <EditText
+            android:id="@+id/voluntario_celular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voluntario_nome"
+            android:inputType="phone"
+            android:ems="9"
+            android:hint="Telefone" />
+
+        <EditText
+            android:id="@+id/voluntario_nascimento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voluntario_nome"
+            android:ems="9"
+            android:hint="Data de nascimento"
+            android:layout_toRightOf="@+id/voluntario_celular"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/voluntario_altura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="6"
+            android:inputType="number"
+            android:layout_below="@+id/voluntario_celular"
+            android:hint="Altura" />
+
+        <EditText
+            android:id="@+id/voluntario_naturalidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:layout_below="@+id/voluntario_celular"
+            android:layout_toRightOf="@+id/voluntario_altura"
+            android:hint="Naturalidade" />
+
+        <RadioGroup
+            android:id="@+id/voluntario_sexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voluntario_naturalidade"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="100dp">
+
+            <TextView
+                android:id="@+id/voluntario_radio_sexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sexo"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/voluntarioRadioM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Masculino" />
+
+            <RadioButton
+                android:id="@+id/voluntarioRadioF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Feminino" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/voluntario_logradouro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:layout_below="@+id/voluntario_sexo"
+            android:hint="Rua/ Avenida" />
+
+        <EditText
+            android:id="@+id/voluntario_numero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/voluntario_logradouro"
+            android:layout_below="@+id/voluntario_sexo"
+            android:ems="6"
+            android:inputType="number"
+            android:hint="Número" />
+
+        <EditText
+            android:id="@+id/voluntario_bairro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_below="@+id/voluntario_logradouro"
+            android:hint="Bairro" />
+
+        <EditText
+            android:id="@+id/voluntario_cep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voluntario_logradouro"
+            android:ems="8"
+            android:hint="CEP"
+            android:layout_toRightOf="@+id/voluntario_bairro"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/voluntario_cidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voluntario_bairro"
+            android:ems="13"
+            android:hint="Cidade" />
+
+        <Spinner
+            android:id="@+id/voluntario_sp_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/voluntario_cidade"
+            android:layout_below="@+id/voluntario_bairro" />
+
+    </RelativeLayout>
+
+</ScrollView>

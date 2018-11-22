@@ -1,9 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MaisMembroActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titulo_membro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Cadastrar Membro"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/membro_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo_membro"
+            android:hint="Nome" />
+
+        <EditText
+            android:id="@+id/membro_celular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/membro_nome"
+            android:inputType="phone"
+            android:ems="9"
+            android:hint="Telefone" />
+
+        <EditText
+            android:id="@+id/membro_nascimento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/membro_nome"
+            android:ems="9"
+            android:hint="Data de nascimento"
+            android:layout_toRightOf="@+id/membro_celular"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/membro_altura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="6"
+            android:inputType="number"
+            android:layout_below="@+id/membro_celular"
+            android:hint="Altura" />
+
+        <EditText
+            android:id="@+id/membro_naturalidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:layout_below="@+id/membro_celular"
+            android:layout_toRightOf="@+id/membro_altura"
+            android:hint="Naturalidade" />
+
+        <RadioGroup
+            android:id="@+id/membro_sexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/membro_naturalidade"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="100dp">
+
+            <TextView
+                android:id="@+id/membro_radio_sexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sexo"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/membroRadioM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Masculino" />
+
+            <RadioButton
+                android:id="@+id/membroRadioF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Feminino" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/membro_logradouro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:layout_below="@+id/membro_sexo"
+            android:hint="Rua/ Avenida" />
+
+        <EditText
+            android:id="@+id/membro_numero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/membro_logradouro"
+            android:layout_below="@+id/membro_sexo"
+            android:ems="6"
+            android:inputType="number"
+            android:hint="Número" />
+
+        <EditText
+            android:id="@+id/membro_bairro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_below="@+id/membro_logradouro"
+            android:hint="Bairro" />
+
+        <EditText
+            android:id="@+id/membro_cep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/membro_logradouro"
+            android:ems="8"
+            android:hint="CEP"
+            android:layout_toRightOf="@+id/membro_bairro"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/membro_cidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/membro_bairro"
+            android:ems="12"
+            android:hint="Cidade" />
+
+        <Spinner
+            android:id="@+id/membro_sp_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/membro_cidade"
+            android:layout_below="@+id/membro_bairro" />
+
+        <EditText
+            android:id="@+id/membro_data_conversao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/membro_cidade"
+            android:ems="11"
+            android:hint="Data da conversão"
+            android:inputType="date" />
+
+        <TextView
+            android:id="@+id/membro_colete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/membro_data_conversao"
+            android:layout_below="@+id/membro_cidade"
+            android:text="Colete"/>
+
+        <Spinner
+            android:id="@+id/membro_sp_colete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/membro_colete"
+            android:layout_below="@+id/membro_cidade" />
+
+        <EditText
+            android:id="@+id/membro_equipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/membro_data_conversao"
+            android:ems="8"
+            android:hint="Equipe"/>
+
+        <EditText
+            android:id="@+id/membro_cargo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/membro_data_conversao"
+            android:ems="8"
+            android:hint="Cargo"
+            android:layout_toRightOf="@+id/membro_equipe"/>
+
+        <Button
+            android:id="@+id/button_gr"
+            android:text="GR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimaryPonte"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/membro_equipe" />
+
+        <EditText
+            android:id="@+id/membro_tempo_ponte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_gr"
+            android:ems="10"
+            android:hint="Tempo na Ponte"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/button_cadastro_membro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/membro_tempo_ponte"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryPonte"
+            android:text="Cadastrar"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+
+</ScrollView>
