@@ -62,6 +62,7 @@
             android:layout_height="wrap_content"
             android:ems="12"
             android:layout_below="@+id/formulario_celular"
+            android:inputType="text"
             android:layout_toRightOf="@+id/formulario_altura"
             android:hint="Naturalidade" />
 
@@ -110,6 +111,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="12"
+            android:inputType="text"
             android:layout_below="@+id/formulario_responsavel"
             android:hint="Rua/ Avenida" />
 
@@ -128,6 +130,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:inputType="text"
             android:layout_below="@+id/formulario_logradouro"
             android:hint="Bairro" />
 
@@ -147,6 +150,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/formulario_bairro"
             android:ems="12"
+            android:inputType="text"
             android:hint="Cidade" />
 
         <Spinner
@@ -198,6 +202,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="13"
+            android:inputType="text"
             android:layout_below="@+id/formulario_matricula"
             android:hint="Colégio/ Escola"/>
 

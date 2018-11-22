@@ -8,7 +8,6 @@ public class Voluntario extends Pessoa implements Serializable {
     private String funcao;
     private double horario_pegar;
     private double horario_largar;
-    private double expediente;
     private double hora_semanal;
     private String tamanho_camisa;
     private int cpf;
@@ -18,14 +17,13 @@ public class Voluntario extends Pessoa implements Serializable {
 
     public Voluntario(String nome, String naturalidade, int celular, Date nascimento, String sexo, float altura,
                       String logradouro, int numero, String bairro, String cep, String cidade, String uf, Long id,
-                      String funcao, double horario_pegar, double horario_largar, double expediente,
-                      double hora_semanal, String tamanho_camisa, int cpf, int rg, String area) {
+                      String funcao, double horario_pegar, double horario_largar, double hora_semanal,
+                      String tamanho_camisa, int cpf, int rg, String area) {
         super(nome, naturalidade, celular, nascimento, sexo, altura, logradouro, numero, bairro, cep, cidade, uf);
         this.id = id;
         this.funcao = funcao;
         this.horario_pegar = horario_pegar;
         this.horario_largar = horario_largar;
-        this.expediente = expediente;
         this.hora_semanal = hora_semanal;
         this.tamanho_camisa = tamanho_camisa;
         this.cpf = cpf;
@@ -63,14 +61,6 @@ public class Voluntario extends Pessoa implements Serializable {
 
     public void setHorario_largar(double horario_largar) {
         this.horario_largar = horario_largar;
-    }
-
-    public double getExpediente() {
-        return expediente;
-    }
-
-    public void setExpediente(double expediente) {
-        this.expediente = expediente;
     }
 
     public double getHora_semanal() {

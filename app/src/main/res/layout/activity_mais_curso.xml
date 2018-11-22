@@ -1,9 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MaisCursoActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titulo_curso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Cadastrar Curso"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/curso_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo_curso"
+            android:inputType="text"
+            android:hint="Curso" />
+
+        <EditText
+            android:id="@+id/curso_professor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/curso_nome"
+            android:inputType="text"
+            android:hint="Professor" />
+
+        <EditText
+            android:id="@+id/curso_inicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:layout_below="@+id/curso_professor"
+            android:hint="Data Início"
+            android:inputType="date"/>
+
+        <EditText
+            android:id="@+id/curso_fim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:layout_below="@+id/curso_professor"
+            android:layout_toRightOf="@+id/curso_inicio"
+            android:hint="Data Fim"
+            android:inputType="date"/>
+
+        <EditText
+            android:id="@+id/curso_dia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/curso_inicio"
+            android:inputType="text"
+            android:hint="Dia de aula"/>
+
+        <EditText
+            android:id="@+id/curso_sala"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:layout_below="@+id/curso_dia"
+            android:inputType="text"
+            android:hint="Sala"/>
+
+        <EditText
+            android:id="@+id/curso_pegar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:inputType="number"
+            android:layout_below="@+id/curso_sala"
+            android:hint="Horário de Início"/>
+
+        <EditText
+            android:id="@+id/curso_largar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:inputType="number"
+            android:layout_below="@+id/curso_sala"
+            android:layout_toRightOf="@+id/curso_pegar"
+            android:hint="Horário de Largar"/>
+
+        <EditText
+            android:id="@+id/curso_carga_horaria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_below="@+id/curso_pegar"
+            android:hint="Carga Horária"/>
+
+        <Button
+            android:id="@+id/button_cadastro_curso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/curso_carga_horaria"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimaryPonte"
+            android:text="Cadastrar"
+            android:textColor="#fff"/>
+
+    </RelativeLayout>
+
+</ScrollView>

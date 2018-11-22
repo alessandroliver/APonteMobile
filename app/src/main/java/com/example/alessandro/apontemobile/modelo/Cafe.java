@@ -12,10 +12,10 @@ public class Cafe extends Produtos implements Serializable {
     private int qtd_venda;
     private double peso;
 
-    public Cafe(String nome, double valor_compra, double valor_venda, int quantidade, String loja,
+    public Cafe(String nomeProduto, double valor_compra, double valor_venda, int quantidade, String loja,
                 String local_fabricacao, Date data_compra, String marca, String sabor, Long id,
                 String temperatura, String ingrediente, int validade, int qtd_venda, double peso) {
-        super(nome, valor_compra, valor_venda, quantidade, loja, local_fabricacao, data_compra, marca);
+        super(nomeProduto, valor_compra, valor_venda, quantidade, loja, local_fabricacao, data_compra, marca);
         this.id = id;
         this.sabor = sabor;
         this.temperatura = temperatura;
@@ -83,6 +83,6 @@ public class Cafe extends Produtos implements Serializable {
 
     @Override
     public String toString() {
-        return getId() + " - " + getNome();
+        return getId() + " - " + getNomeProduto();
     }
 }

@@ -1,9 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MaisMaterialActivity">
+    tools:context=".MaisFuncionarioActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titulo_material"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Cadastrar Material"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/material_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo_material"
+            android:inputType="text"
+            android:hint="Nome" />
+
+        <EditText
+            android:id="@+id/material_valor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/material_nome"
+            android:hint="Valor"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/material_loja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/material_valor"
+            android:inputType="text"
+            android:hint="Loja" />
+
+        <EditText
+            android:id="@+id/material_data_compra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/material_loja"
+            android:inputType="date"
+            android:hint="Data da Compra" />
+
+        <EditText
+            android:id="@+id/material_validade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/material_data_compra"
+            android:inputType="text"
+            android:hint="Validade" />
+
+        <EditText
+            android:id="@+id/material_garantia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/material_validade"
+            android:inputType="text"
+            android:hint="Garantia" />
+
+        <EditText
+            android:id="@+id/material_tipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/material_garantia"
+            android:inputType="text"
+            android:hint="Tipo do material" />
+
+        <EditText
+            android:id="@+id/material_finalidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/material_tipo"
+            android:inputType="text"
+            android:hint="Finalidade do material" />
+
+        <EditText
+            android:id="@+id/material_peso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/material_finalidade"
+            android:inputType="number"
+            android:hint="Peso do material" />
+
+        <EditText
+            android:id="@+id/material_tamanho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/material_peso"
+            android:inputType="number"
+            android:hint="Tamanho do material" />
+
+        <EditText
+            android:id="@+id/material_quantidade_material"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/material_tamanho"
+            android:inputType="number"
+            android:hint="Quantidade do material" />
+
+        <Button
+            android:id="@+id/button_cadastro_material"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/material_quantidade_material"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryPonte"
+            android:text="Cadastrar"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+
+</ScrollView>

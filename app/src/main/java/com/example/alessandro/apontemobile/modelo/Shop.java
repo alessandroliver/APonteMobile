@@ -10,10 +10,10 @@ public class Shop extends Produtos implements Serializable {
     private Date data_fabricacao;
     private String finalidade;
 
-    public Shop(String nome, double valor_compra, double valor_venda, int quantidade, String loja,
+    public Shop(String nomeProduto, double valor_compra, double valor_venda, int quantidade, String loja,
                 String local_fabricacao, Date data_compra, String marca, Long id, int qtd_venda,
                 String cor, Date data_fabricacao, String finalidade) {
-        super(nome, valor_compra, valor_venda, quantidade, loja, local_fabricacao, data_compra, marca);
+        super(nomeProduto, valor_compra, valor_venda, quantidade, loja, local_fabricacao, data_compra, marca);
         this.id = id;
         this.qtd_venda = qtd_venda;
         this.cor = cor;
@@ -63,6 +63,6 @@ public class Shop extends Produtos implements Serializable {
 
     @Override
     public String toString() {
-        return getId() + " - " + getNome();
+        return getId() + " - " + getNomeProduto();
     }
 }

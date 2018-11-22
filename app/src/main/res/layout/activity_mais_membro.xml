@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/titulo_membro"
+            android:inputType="text"
             android:hint="Nome" />
 
         <EditText
@@ -63,6 +64,7 @@
             android:ems="12"
             android:layout_below="@+id/membro_celular"
             android:layout_toRightOf="@+id/membro_altura"
+            android:inputType="text"
             android:hint="Naturalidade" />
 
         <RadioGroup
@@ -104,6 +106,7 @@
             android:layout_height="wrap_content"
             android:ems="12"
             android:layout_below="@+id/membro_sexo"
+            android:inputType="text"
             android:hint="Rua/ Avenida" />
 
         <EditText
@@ -122,6 +125,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:layout_below="@+id/membro_logradouro"
+            android:inputType="text"
             android:hint="Bairro" />
 
         <EditText
@@ -140,6 +144,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/membro_bairro"
             android:ems="12"
+            android:inputType="text"
             android:hint="Cidade" />
 
         <Spinner
@@ -179,6 +184,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/membro_data_conversao"
             android:ems="8"
+            android:inputType="text"
             android:hint="Equipe"/>
 
         <EditText
@@ -188,6 +194,7 @@
             android:layout_below="@+id/membro_data_conversao"
             android:ems="8"
             android:hint="Cargo"
+            android:inputType="text"
             android:layout_toRightOf="@+id/membro_equipe"/>
 
         <Button

@@ -1,9 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MaisGrActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titulo_gr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Cadastrar GR"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/gr_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo_gr"
+            android:inputType="text"
+            android:hint="GR" />
+
+        <EditText
+            android:id="@+id/gr_lider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gr_nome"
+            android:inputType="text"
+            android:hint="Líder" />
+
+        <EditText
+            android:id="@+id/gr_apoio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gr_lider"
+            android:inputType="text"
+            android:hint="Apoio" />
+
+        <EditText
+            android:id="@+id/gr_dia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:inputType="text"
+            android:layout_below="@+id/gr_apoio"
+            android:hint="Dia" />
+
+        <EditText
+            android:id="@+id/gr_horario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:layout_below="@+id/gr_apoio"
+            android:layout_toRightOf="@+id/gr_dia"
+            android:inputType="number"
+            android:hint="Horário" />
+
+        <EditText
+            android:id="@+id/gr_contato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gr_dia"
+            android:inputType="number"
+            android:hint="Contato" />
+
+        <EditText
+            android:id="@+id/gr_frequencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="11"
+            android:inputType="text"
+            android:layout_below="@+id/gr_contato"
+            android:hint="Frequência" />
+
+        <EditText
+            android:id="@+id/gr_quantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:layout_below="@+id/gr_contato"
+            android:inputType="number"
+            android:layout_toRightOf="@+id/gr_frequencia"
+            android:hint="Quantidade" />
+
+        <EditText
+            android:id="@+id/gr_logradouro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:inputType="text"
+            android:layout_below="@+id/gr_frequencia"
+            android:hint="Rua/ Avenida" />
+
+        <EditText
+            android:id="@+id/gr_numero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/gr_logradouro"
+            android:layout_below="@+id/gr_frequencia"
+            android:ems="6"
+            android:inputType="number"
+            android:hint="Número" />
+
+        <EditText
+            android:id="@+id/gr_bairro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_below="@+id/gr_logradouro"
+            android:hint="Bairro" />
+
+        <EditText
+            android:id="@+id/gr_cep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gr_logradouro"
+            android:ems="8"
+            android:hint="CEP"
+            android:layout_toRightOf="@+id/gr_bairro"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/gr_cidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gr_bairro"
+            android:ems="12"
+            android:inputType="text"
+            android:hint="Cidade" />
+
+        <Spinner
+            android:id="@+id/gr_sp_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/gr_cidade"
+            android:layout_below="@+id/gr_bairro" />
+
+        <EditText
+            android:id="@+id/gr_inauguracao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gr_cidade"
+            android:ems="12"
+            android:inputType="date"
+            android:hint="Inauguração" />
+
+        <Button
+            android:id="@+id/button_cadastro_gr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gr_inauguracao"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryPonte"
+            android:text="Cadastrar"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+
+</ScrollView>

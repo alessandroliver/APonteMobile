@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Material implements Serializable {
     private Long id;
-    private String nome;
+    private String nomeMaterial;
     private double valor;
     private String finalidade;
     private String garantia;
@@ -15,11 +15,12 @@ public class Material implements Serializable {
     private String tipo;
     private double peso;
     private double tamanho;
+    private int quantidadeMaterial;
 
-    public Material(Long id, String nome, double valor, String finalidade, String garantia, String loja,
-                    Date data_compra, String validade, String tipo, double peso, double tamanho) {
+    public Material(Long id, String nomeMaterial, double valor, String finalidade, String garantia, String loja,
+                    Date data_compra, String validade, String tipo, double peso, double tamanho, int quantidadeMaterial) {
         this.id = id;
-        this.nome = nome;
+        this.nomeMaterial = nomeMaterial;
         this.valor = valor;
         this.finalidade = finalidade;
         this.garantia = garantia;
@@ -29,6 +30,7 @@ public class Material implements Serializable {
         this.tipo = tipo;
         this.peso = peso;
         this.tamanho = tamanho;
+        this.quantidadeMaterial = quantidadeMaterial;
     }
 
     public Long getId() {
@@ -39,12 +41,12 @@ public class Material implements Serializable {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeMaterial() {
+        return nomeMaterial;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeMaterial(String nome) {
+        this.nomeMaterial = nome;
     }
 
     public double getValor() {
@@ -119,8 +121,16 @@ public class Material implements Serializable {
         this.tamanho = tamanho;
     }
 
+    public double getQuantidadeMaterial() {
+        return quantidadeMaterial;
+    }
+
+    public void setQuantidadeMaterial(int quantidadeMaterial) {
+        this.quantidadeMaterial = quantidadeMaterial;
+    }
+
     @Override
     public String toString() {
-        return getId() + " - " + getNome();
+        return getId() + " - " + getNomeMaterial();
     }
 }

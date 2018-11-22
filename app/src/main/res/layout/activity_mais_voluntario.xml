@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/titulo_voluntario"
+            android:inputType="text"
             android:hint="Nome" />
 
         <EditText
@@ -63,6 +64,7 @@
             android:ems="12"
             android:layout_below="@+id/voluntario_celular"
             android:layout_toRightOf="@+id/voluntario_altura"
+            android:inputType="text"
             android:hint="Naturalidade" />
 
         <RadioGroup
@@ -104,6 +106,7 @@
             android:layout_height="wrap_content"
             android:ems="12"
             android:layout_below="@+id/voluntario_sexo"
+            android:inputType="text"
             android:hint="Rua/ Avenida" />
 
         <EditText
@@ -122,6 +125,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:layout_below="@+id/voluntario_logradouro"
+            android:inputType="text"
             android:hint="Bairro" />
 
         <EditText
@@ -139,7 +143,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/voluntario_bairro"
-            android:ems="13"
+            android:ems="12"
+            android:inputType="text"
             android:hint="Cidade" />
 
         <Spinner
@@ -148,6 +153,97 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/voluntario_cidade"
             android:layout_below="@+id/voluntario_bairro" />
+
+        <EditText
+            android:id="@+id/voluntario_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:layout_below="@+id/voluntario_cidade"
+            android:hint="RG"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/voluntario_cpf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voluntario_cidade"
+            android:ems="10"
+            android:hint="CPF"
+            android:layout_toRightOf="@+id/voluntario_rg"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/voluntario_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:layout_below="@+id/voluntario_rg"
+            android:inputType="text"
+            android:hint="Área" />
+
+        <EditText
+            android:id="@+id/voluntario_funcao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voluntario_rg"
+            android:ems="9"
+            android:hint="Função"
+            android:inputType="text"
+            android:layout_toRightOf="@+id/voluntario_area" />
+
+        <EditText
+            android:id="@+id/voluntario_hora_semanal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_below="@+id/voluntario_area"
+            android:hint="Hora Semanal"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/voluntario_camisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/voluntario_hora_semanal"
+            android:layout_below="@+id/voluntario_area"
+            android:text="Camisa"/>
+
+        <Spinner
+            android:id="@+id/voluntario_sp_camisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/voluntario_camisa"
+            android:layout_below="@+id/voluntario_area" />
+
+        <EditText
+            android:id="@+id/voluntario_horario_pegar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:layout_below="@+id/voluntario_hora_semanal"
+            android:inputType="number"
+            android:hint="Início Expediente" />
+
+        <EditText
+            android:id="@+id/voluntario_horario_largar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voluntario_hora_semanal"
+            android:ems="9"
+            android:hint="Fim Expediente"
+            android:inputType="number"
+            android:layout_toRightOf="@+id/voluntario_horario_pegar" />
+
+        <Button
+            android:id="@+id/button_cadastro_voluntario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voluntario_horario_pegar"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryPonte"
+            android:text="Cadastrar"
+            android:textColor="#fff" />
 
     </RelativeLayout>
 

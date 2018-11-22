@@ -3,7 +3,7 @@ package com.example.alessandro.apontemobile.modelo;
 import java.util.Date;
 
 public abstract class Produtos {
-    private String nome;
+    private String nomeProduto;
     private double valor_compra;
     private double valor_venda;
     private int quantidade;
@@ -12,9 +12,9 @@ public abstract class Produtos {
     private Date data_compra;
     private String marca;
 
-    public Produtos(String nome, double valor_compra, double valor_venda, int quantidade, String loja,
+    public Produtos(String nomeProduto, double valor_compra, double valor_venda, int quantidade, String loja,
                     String local_fabricacao, Date data_compra, String marca) {
-        this.nome = nome;
+        this.nomeProduto = nomeProduto;
         this.valor_compra = valor_compra;
         this.valor_venda = valor_venda;
         this.quantidade = quantidade;
@@ -24,12 +24,12 @@ public abstract class Produtos {
         this.marca = marca;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeProduto() {
+        return nomeProduto;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeProduto(String nomeProduto) {
+        this.nomeProduto = nomeProduto;
     }
 
     public double getValor_compra() {
