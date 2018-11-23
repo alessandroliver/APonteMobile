@@ -5,10 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 public class MembroActivity extends AppCompatActivity {
 
     private Button maisMembro;
+    private ListView listaMembros;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +18,8 @@ public class MembroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_membro);
 
         maisMembro = findViewById(R.id.add_membro);
+
+        listaMembros = (ListView) findViewById(R.id.lista_membros);
 
         maisMembro.setOnClickListener(new View.OnClickListener() {
             @Override

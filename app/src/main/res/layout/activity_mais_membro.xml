@@ -197,7 +197,22 @@
             android:inputType="text"
             android:layout_toRightOf="@+id/membro_equipe"/>
 
-        <Button
+        <TextView
+            android:id="@+id/membro_gr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/membro_equipe"
+            android:text="GR: "/>
+
+        <Spinner
+            android:id="@+id/sp_membro_gr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/membro_gr"
+            android:layout_below="@+id/membro_equipe" />
+
+        <!--<Button
             android:id="@+id/button_gr"
             android:text="GR"
             android:layout_width="wrap_content"
@@ -205,13 +220,13 @@
             android:textColor="#ffffff"
             android:background="@color/colorPrimaryPonte"
             android:layout_marginLeft="5dp"
-            android:layout_below="@+id/membro_equipe" />
+            android:layout_below="@+id/membro_equipe" />-->
 
         <EditText
             android:id="@+id/membro_tempo_ponte"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/button_gr"
+            android:layout_below="@+id/membro_gr"
             android:ems="10"
             android:hint="Tempo na Ponte"
             android:inputType="number" />

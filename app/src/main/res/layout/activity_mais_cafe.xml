@@ -29,6 +29,133 @@
             android:inputType="text"
             android:hint="Nome" />
 
+        <EditText
+            android:id="@+id/cafe_marca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafe_nome"
+            android:inputType="text"
+            android:ems="9"
+            android:hint="Marca" />
+
+        <EditText
+            android:id="@+id/cafe_loja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafe_nome"
+            android:inputType="text"
+            android:ems="9"
+            android:layout_toRightOf="@+id/cafe_marca"
+            android:hint="Loja" />
+
+        <EditText
+            android:id="@+id/cafe_valor_compra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafe_marca"
+            android:inputType="number"
+            android:ems="9"
+            android:hint="Valor de compra" />
+
+        <EditText
+            android:id="@+id/cafe_valor_venda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafe_marca"
+            android:inputType="number"
+            android:ems="9"
+            android:layout_toRightOf="@+id/cafe_valor_compra"
+            android:hint="Valor de venda" />
+
+        <EditText
+            android:id="@+id/cafe_local_fabricacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafe_valor_compra"
+            android:inputType="text"
+            android:ems="10"
+            android:hint="Local de fabricação" />
+
+        <EditText
+            android:id="@+id/cafe_data_compra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafe_valor_compra"
+            android:inputType="date"
+            android:ems="8"
+            android:layout_toRightOf="@+id/cafe_local_fabricacao"
+            android:hint="Data de compra" />
+
+        <EditText
+            android:id="@+id/cafe_sabor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafe_local_fabricacao"
+            android:inputType="text"
+            android:ems="11"
+            android:hint="Sabor" />
+
+        <EditText
+            android:id="@+id/cafe_quantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafe_local_fabricacao"
+            android:inputType="date"
+            android:ems="7"
+            android:layout_toRightOf="@+id/cafe_sabor"
+            android:hint="Quantidade" />
+
+        <EditText
+            android:id="@+id/cafe_ingrediente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafe_sabor"
+            android:inputType="text"
+            android:hint="Ingredientes" />
+
+        <EditText
+            android:id="@+id/cafe_validade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafe_ingrediente"
+            android:inputType="text"
+            android:ems="11"
+            android:hint="Validade" />
+
+        <EditText
+            android:id="@+id/cafe_peso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafe_ingrediente"
+            android:inputType="number"
+            android:ems="7"
+            android:layout_toRightOf="@+id/cafe_validade"
+            android:hint="Peso" />
+
+        <TextView
+            android:id="@+id/titulo_temperatuda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafe_validade"
+            android:text="Temperatura" />
+
+        <Spinner
+            android:id="@+id/sp_cafe_temperatura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/titulo_temperatuda"
+            android:layout_below="@+id/cafe_validade" />
+
+        <Button
+            android:id="@+id/button_cadastro_cafe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo_temperatuda"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimaryPonte"
+            android:text="Cadastrar"
+            android:textColor="#fff" />
+
     </RelativeLayout>
 
 </ScrollView>

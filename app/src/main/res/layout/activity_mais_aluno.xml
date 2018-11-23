@@ -160,7 +160,22 @@
             android:layout_toRightOf="@+id/formulario_cidade"
             android:layout_below="@+id/formulario_bairro" />
 
-        <Button
+        <TextView
+            android:id="@+id/aluno_curso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/formulario_cidade"
+            android:text="Curso: "/>
+
+        <Spinner
+            android:id="@+id/sp_aluno_curso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/aluno_curso"
+            android:layout_below="@+id/formulario_cidade" />
+
+        <!--<Button
             android:id="@+id/button_cursos"
             android:text="Adicionar Curso"
             android:layout_width="wrap_content"
@@ -170,13 +185,13 @@
             android:layout_marginLeft="5dp"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:layout_below="@+id/formulario_cidade" />
+            android:layout_below="@+id/formulario_cidade" />-->
 
         <EditText
             android:id="@+id/formulario_matricula"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/button_cursos"
+            android:layout_below="@+id/aluno_curso"
             android:hint="Matrícula"
             android:ems="10"
             android:inputType="number" />
@@ -186,7 +201,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/formulario_matricula"
-            android:layout_below="@+id/button_cursos"
+            android:layout_below="@+id/aluno_curso"
             android:layout_marginLeft="28dp"
             android:text="Farda"/>
 
@@ -195,7 +210,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/titulo_tamanho"
-            android:layout_below="@+id/button_cursos" />
+            android:layout_below="@+id/aluno_curso" />
 
         <EditText
             android:id="@+id/formulario_escola"

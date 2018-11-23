@@ -61,4 +61,18 @@
         <item>"M"</item>
         <item>"G"</item>
     </string-array>
+    <string-array name="temperatura">
+        <item>""</item>
+        <item>"Quente"</item>
+        <item>"Frio"</item>
+        <item>"Gelado"</item>
+    </string-array>
+    <string-array name="grs">
+        <item>""</item>
+        <item>"getNomeGr"</item>
+    </string-array>
+    <string-array name="cursos">
+        <item>""</item>
+        <item>"getNomeCurso"</item>
+    </string-array>
 </resources>

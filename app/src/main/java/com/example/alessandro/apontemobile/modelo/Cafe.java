@@ -9,19 +9,17 @@ public class Cafe extends Produtos implements Serializable {
     private String temperatura;
     private String ingrediente;
     private int validade;
-    private int qtd_venda;
     private double peso;
 
     public Cafe(String nomeProduto, double valor_compra, double valor_venda, int quantidade, String loja,
                 String local_fabricacao, Date data_compra, String marca, String sabor, Long id,
-                String temperatura, String ingrediente, int validade, int qtd_venda, double peso) {
+                String temperatura, String ingrediente, int validade, double peso) {
         super(nomeProduto, valor_compra, valor_venda, quantidade, loja, local_fabricacao, data_compra, marca);
         this.id = id;
         this.sabor = sabor;
         this.temperatura = temperatura;
         this.ingrediente = ingrediente;
         this.validade = validade;
-        this.qtd_venda = qtd_venda;
         this.peso = peso;
     }
 
@@ -63,14 +61,6 @@ public class Cafe extends Produtos implements Serializable {
 
     public void setValidade(int validade) {
         this.validade = validade;
-    }
-
-    public int getQtd_venda() {
-        return qtd_venda;
-    }
-
-    public void setQtd_venda(int qtd_venda) {
-        this.qtd_venda = qtd_venda;
     }
 
     public double getPeso() {

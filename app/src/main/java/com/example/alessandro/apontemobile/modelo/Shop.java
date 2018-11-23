@@ -5,20 +5,18 @@ import java.util.Date;
 
 public class Shop extends Produtos implements Serializable {
     private Long id;
-    private int qtd_venda;
+    private String tipo;
     private String cor;
     private Date data_fabricacao;
-    private String finalidade;
 
     public Shop(String nomeProduto, double valor_compra, double valor_venda, int quantidade, String loja,
-                String local_fabricacao, Date data_compra, String marca, Long id, int qtd_venda,
-                String cor, Date data_fabricacao, String finalidade) {
+                String local_fabricacao, Date data_compra, String marca, Long id, String tipo, String cor,
+                Date data_fabricacao) {
         super(nomeProduto, valor_compra, valor_venda, quantidade, loja, local_fabricacao, data_compra, marca);
         this.id = id;
-        this.qtd_venda = qtd_venda;
+        this.tipo = tipo;
         this.cor = cor;
         this.data_fabricacao = data_fabricacao;
-        this.finalidade = finalidade;
     }
 
     public Long getId() {
@@ -29,12 +27,12 @@ public class Shop extends Produtos implements Serializable {
         this.id = id;
     }
 
-    public int getQtd_venda() {
-        return qtd_venda;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setQtd_venda(int qtd_venda) {
-        this.qtd_venda = qtd_venda;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public String getCor() {
@@ -51,14 +49,6 @@ public class Shop extends Produtos implements Serializable {
 
     public void setData_fabricacao(Date data_fabricacao) {
         this.data_fabricacao = data_fabricacao;
-    }
-
-    public String getFinalidade() {
-        return finalidade;
-    }
-
-    public void setFinalidade(String finalidade) {
-        this.finalidade = finalidade;
     }
 
     @Override

@@ -1,9 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MaisShopActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titulo_shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Cadastrar Produtos para a Ponte Shop"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/shop_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo_shop"
+            android:inputType="text"
+            android:hint="Nome" />
+
+        <EditText
+            android:id="@+id/shop_marca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shop_nome"
+            android:inputType="text"
+            android:ems="9"
+            android:hint="Marca" />
+
+        <EditText
+            android:id="@+id/shop_loja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shop_nome"
+            android:inputType="text"
+            android:ems="9"
+            android:layout_toRightOf="@+id/shop_marca"
+            android:hint="Loja" />
+
+        <EditText
+            android:id="@+id/shop_valor_compra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shop_marca"
+            android:inputType="number"
+            android:ems="9"
+            android:hint="Valor de compra" />
+
+        <EditText
+            android:id="@+id/shop_valor_venda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shop_marca"
+            android:inputType="number"
+            android:ems="9"
+            android:layout_toRightOf="@+id/shop_valor_compra"
+            android:hint="Valor de venda" />
+
+        <EditText
+            android:id="@+id/shop_local_fabricacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shop_valor_compra"
+            android:inputType="text"
+            android:ems="10"
+            android:hint="Local de fabricação" />
+
+        <EditText
+            android:id="@+id/shop_data_compra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shop_valor_compra"
+            android:inputType="date"
+            android:ems="8"
+            android:layout_toRightOf="@+id/shop_local_fabricacao"
+            android:hint="Data de compra" />
+
+        <EditText
+            android:id="@+id/shop_tipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shop_local_fabricacao"
+            android:inputType="text"
+            android:ems="11"
+            android:hint="Tipo" />
+
+        <EditText
+            android:id="@+id/shop_quantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shop_local_fabricacao"
+            android:inputType="date"
+            android:ems="7"
+            android:layout_toRightOf="@+id/shop_tipo"
+            android:hint="Quantidade" />
+
+        <EditText
+            android:id="@+id/shop_cor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shop_tipo"
+            android:inputType="text"
+            android:ems="10"
+            android:hint="Cor" />
+
+        <EditText
+            android:id="@+id/shop_data_fabricacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shop_cor"
+            android:inputType="date"
+            android:ems="12"
+            android:hint="Data de fabricação" />
+
+        <Button
+            android:id="@+id/button_cadastro_shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shop_data_fabricacao"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimaryPonte"
+            android:text="Cadastrar"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+
+</ScrollView>
