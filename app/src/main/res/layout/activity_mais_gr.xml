@@ -61,7 +61,7 @@
             android:ems="9"
             android:layout_below="@+id/gr_apoio"
             android:layout_toRightOf="@+id/gr_dia"
-            android:inputType="number"
+            android:inputType="time"
             android:hint="Horário" />
 
         <EditText

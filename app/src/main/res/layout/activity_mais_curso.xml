@@ -78,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="9"
-            android:inputType="number"
+            android:inputType="time"
             android:layout_below="@+id/curso_sala"
             android:hint="Horário de Início"/>
 
@@ -87,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="9"
-            android:inputType="number"
+            android:inputType="time"
             android:layout_below="@+id/curso_sala"
             android:layout_toRightOf="@+id/curso_pegar"
             android:hint="Horário de Largar"/>

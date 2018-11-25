@@ -10,14 +10,14 @@ public class Membro extends Pessoa implements Serializable {
     private Long id;
     private Date data_conversao;
     private String equipe;
-    private double tempo_ponte;
+    private String tempo_ponte;
     private String cargo;
     private ArrayList<Gr> gr;
     private String colete;
 
     public Membro(String nome, String naturalidade, int celular, Date nascimento, String sexo, float altura,
                   String logradouro, int numero, String bairro, String cep, String cidade, String uf, Long id,
-                  Date data_conversao, String equipe, double tempo_ponte, String cargo, ArrayList<Gr> gr,
+                  Date data_conversao, String equipe, String tempo_ponte, String cargo, ArrayList<Gr> gr,
                   String colete) {
         super(nome, naturalidade, celular, nascimento, sexo, altura, logradouro, numero, bairro, cep, cidade, uf);
         this.id = id;
@@ -54,11 +54,11 @@ public class Membro extends Pessoa implements Serializable {
         this.equipe = equipe;
     }
 
-    public double getTempo_ponte() {
+    public String getTempo_ponte() {
         return tempo_ponte;
     }
 
-    public void setTempo_ponte(double tempo_ponte) {
+    public void setTempo_ponte(String tempo_ponte) {
         this.tempo_ponte = tempo_ponte;
     }
 

@@ -222,7 +222,7 @@
             android:layout_height="wrap_content"
             android:ems="9"
             android:layout_below="@+id/voluntario_hora_semanal"
-            android:inputType="number"
+            android:inputType="text"
             android:hint="Início Expediente" />
 
         <EditText
@@ -232,7 +232,7 @@
             android:layout_below="@+id/voluntario_hora_semanal"
             android:ems="9"
             android:hint="Fim Expediente"
-            android:inputType="number"
+            android:inputType="text"
             android:layout_toRightOf="@+id/voluntario_horario_pegar" />
 
         <Button

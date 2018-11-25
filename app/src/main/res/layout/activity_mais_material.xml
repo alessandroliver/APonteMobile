@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/material_nome"
             android:hint="Valor"
-            android:inputType="number"/>
+            android:inputType="text"/>
 
         <EditText
             android:id="@+id/material_loja"
@@ -90,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/material_finalidade"
-            android:inputType="number"
+            android:inputType="text"
             android:hint="Peso do material" />
 
         <EditText
@@ -98,7 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/material_peso"
-            android:inputType="number"
+            android:inputType="text"
             android:hint="Tamanho do material" />
 
         <EditText
