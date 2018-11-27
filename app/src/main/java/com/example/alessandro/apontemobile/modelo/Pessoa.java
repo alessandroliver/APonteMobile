@@ -8,7 +8,7 @@ public class Pessoa {
     private int celular;
     private Date nascimento;
     private String sexo;
-    private float altura;
+    private double altura;
     private String logradouro;
     private int numero;
     private String bairro;
@@ -16,7 +16,7 @@ public class Pessoa {
     private String cidade;
     private String uf;
 
-    public Pessoa(String nome, String naturalidade, int celular, Date nascimento, String sexo, float altura,
+    public Pessoa(String nome, String naturalidade, int celular, Date nascimento, String sexo, double altura,
                   String logradouro, int numero, String bairro, String cep, String cidade, String uf) {
         this.nome = nome;
         this.naturalidade = naturalidade;
@@ -72,11 +72,11 @@ public class Pessoa {
         this.sexo = sexo;
     }
 
-    public float getAltura() {
+    public double getAltura() {
         return altura;
     }
 
-    public void setAltura(float altura) {
+    public void setAltura(double altura) {
         this.altura = altura;
     }
 

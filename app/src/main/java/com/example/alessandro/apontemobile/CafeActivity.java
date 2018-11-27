@@ -26,4 +26,5 @@ public class CafeActivity extends AppCompatActivity {
         });
 
     }
+
 }

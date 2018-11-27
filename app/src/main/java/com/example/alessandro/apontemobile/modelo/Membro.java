@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Membro extends Pessoa implements Serializable {
-    private Long id;
+    private int id;
     private Date data_conversao;
     private String equipe;
     private String tempo_ponte;
@@ -15,8 +15,8 @@ public class Membro extends Pessoa implements Serializable {
     private ArrayList<Gr> gr;
     private String colete;
 
-    public Membro(String nome, String naturalidade, int celular, Date nascimento, String sexo, float altura,
-                  String logradouro, int numero, String bairro, String cep, String cidade, String uf, Long id,
+    public Membro(String nome, String naturalidade, int celular, Date nascimento, String sexo, double altura,
+                  String logradouro, int numero, String bairro, String cep, String cidade, String uf, int id,
                   Date data_conversao, String equipe, String tempo_ponte, String cargo, ArrayList<Gr> gr,
                   String colete) {
         super(nome, naturalidade, celular, nascimento, sexo, altura, logradouro, numero, bairro, cep, cidade, uf);
@@ -30,11 +30,11 @@ public class Membro extends Pessoa implements Serializable {
 
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

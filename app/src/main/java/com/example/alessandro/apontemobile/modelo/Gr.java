@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Gr implements Serializable {
-    private Long id;
+    private int id;
     private String nomeGr;
     private int quantidade;
     private double horario;
@@ -17,12 +17,12 @@ public class Gr implements Serializable {
     private String logradouro;
     private int numero;
     private String bairro;
-    private String cep;
+    private int cep;
     private String cidade;
     private String uf;
 
-    public Gr(Long id, String nomeGr, int quantidade, double horario, String dia, String frequencia, String lider,
-              String apoio, int contato, Date inauguracao, String logradouro, int numero, String bairro, String cep,
+    public Gr(int id, String nomeGr, int quantidade, double horario, String dia, String frequencia, String lider,
+              String apoio, int contato, Date inauguracao, String logradouro, int numero, String bairro, int cep,
               String cidade, String uf) {
         this.id = id;
         this.nomeGr = nomeGr;
@@ -42,11 +42,11 @@ public class Gr implements Serializable {
         this.uf = uf;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -146,11 +146,11 @@ public class Gr implements Serializable {
         this.bairro = bairro;
     }
 
-    public String getCep() {
+    public int getCep() {
         return cep;
     }
 
-    public void setCep(String cep) {
+    public void setCep(int cep) {
         this.cep = cep;
     }
 

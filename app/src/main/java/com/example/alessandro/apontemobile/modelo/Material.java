@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Material implements Serializable {
-    private Long id;
+    private int id;
     private String nomeMaterial;
     private double valor;
     private String finalidade;
@@ -17,7 +17,7 @@ public class Material implements Serializable {
     private double tamanho;
     private int quantidadeMaterial;
 
-    public Material(Long id, String nomeMaterial, double valor, String finalidade, String garantia, String loja,
+    public Material(int id, String nomeMaterial, double valor, String finalidade, String garantia, String loja,
                     Date data_compra, String validade, String tipo, double peso, double tamanho, int quantidadeMaterial) {
         this.id = id;
         this.nomeMaterial = nomeMaterial;
@@ -33,11 +33,11 @@ public class Material implements Serializable {
         this.quantidadeMaterial = quantidadeMaterial;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

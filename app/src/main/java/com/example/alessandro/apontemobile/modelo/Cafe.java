@@ -4,16 +4,16 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Cafe extends Produtos implements Serializable {
-    private Long id;
+    private int id;
     private String sabor;
     private String temperatura;
     private String ingrediente;
-    private int validade;
+    private String validade;
     private double peso;
 
     public Cafe(String nomeProduto, double valor_compra, double valor_venda, int quantidade, String loja,
-                String local_fabricacao, Date data_compra, String marca, String sabor, Long id,
-                String temperatura, String ingrediente, int validade, double peso) {
+                String local_fabricacao, Date data_compra, String marca, int id, String sabor,
+                String temperatura, String ingrediente, String validade, double peso) {
         super(nomeProduto, valor_compra, valor_venda, quantidade, loja, local_fabricacao, data_compra, marca);
         this.id = id;
         this.sabor = sabor;
@@ -23,11 +23,11 @@ public class Cafe extends Produtos implements Serializable {
         this.peso = peso;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -55,11 +55,11 @@ public class Cafe extends Produtos implements Serializable {
         this.ingrediente = ingrediente;
     }
 
-    public int getValidade() {
+    public String getValidade() {
         return validade;
     }
 
-    public void setValidade(int validade) {
+    public void setValidade(String validade) {
         this.validade = validade;
     }
 

@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Curso implements Serializable {
-    private Long id;
+    private int id;
     private String nomeCurso;
     private Date inicio;
     private Date fim;
@@ -18,7 +18,7 @@ public class Curso implements Serializable {
     private double largar;
     private String sala;
 
-    public Curso(Long id, String nomeCurso, Date inicio, Date fim, int carga_horaria, String professor, String dia,
+    public Curso(int id, String nomeCurso, Date inicio, Date fim, int carga_horaria, String professor, String dia,
                  double pegar, double largar, String sala) {
         this.id = id;
         this.nomeCurso = nomeCurso;
@@ -32,11 +32,11 @@ public class Curso implements Serializable {
         this.sala = sala;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

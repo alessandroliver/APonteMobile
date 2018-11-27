@@ -4,13 +4,13 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Shop extends Produtos implements Serializable {
-    private Long id;
+    private int id;
     private String tipo;
     private String cor;
     private Date data_fabricacao;
 
     public Shop(String nomeProduto, double valor_compra, double valor_venda, int quantidade, String loja,
-                String local_fabricacao, Date data_compra, String marca, Long id, String tipo, String cor,
+                String local_fabricacao, Date data_compra, String marca, int id, String tipo, String cor,
                 Date data_fabricacao) {
         super(nomeProduto, valor_compra, valor_venda, quantidade, loja, local_fabricacao, data_compra, marca);
         this.id = id;
@@ -19,11 +19,11 @@ public class Shop extends Produtos implements Serializable {
         this.data_fabricacao = data_fabricacao;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
