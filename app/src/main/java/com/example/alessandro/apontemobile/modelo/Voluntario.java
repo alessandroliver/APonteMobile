@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Voluntario extends Pessoa implements Serializable {
-    private int id;
     private String funcao;
     private double horario_pegar;
     private double horario_largar;
@@ -16,11 +15,10 @@ public class Voluntario extends Pessoa implements Serializable {
 
 
     public Voluntario(String nome, String naturalidade, int celular, Date nascimento, String sexo, double altura,
-                      String logradouro, int numero, String bairro, String cep, String cidade, String uf, int id,
+                      String logradouro, int numero, String bairro, String cep, String cidade, String uf,
                       String funcao, double horario_pegar, double horario_largar, double hora_semanal,
                       String tamanho_camisa, int cpf, int rg, String area) {
         super(nome, naturalidade, celular, nascimento, sexo, altura, logradouro, numero, bairro, cep, cidade, uf);
-        this.id = id;
         this.funcao = funcao;
         this.horario_pegar = horario_pegar;
         this.horario_largar = horario_largar;
@@ -29,14 +27,6 @@ public class Voluntario extends Pessoa implements Serializable {
         this.cpf = cpf;
         this.rg = rg;
         this.area = area;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getFuncao() {
@@ -105,6 +95,6 @@ public class Voluntario extends Pessoa implements Serializable {
 
     @Override
     public String toString() {
-        return getId() + " - " + getNome();
+        return getNome();
     }
 }

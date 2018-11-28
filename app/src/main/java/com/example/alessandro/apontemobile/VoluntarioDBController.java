@@ -38,9 +38,9 @@ public class VoluntarioDBController {
                         cursor.getInt(2),date,cursor.getString(4),cursor.getDouble(5),
                         cursor.getString(6),cursor.getInt(7),cursor.getString(8),
                         cursor.getString(9),cursor.getString(10),cursor.getString(11),
-                        cursor.getInt(12),cursor.getString(13),cursor.getDouble(14),
-                        cursor.getDouble(15),cursor.getInt(16),cursor.getString(17),
-                        cursor.getInt(18),cursor.getInt(19),cursor.getString(20));
+                        cursor.getString(12),cursor.getDouble(13),cursor.getDouble(14),
+                        cursor.getInt(15),cursor.getString(16),cursor.getInt(17),
+                        cursor.getInt(18),cursor.getString(19));
 
                 voluntarioList.add(vol);
             } while (cursor.moveToNext());
@@ -85,7 +85,6 @@ public class VoluntarioDBController {
         values.put(VoluntarioDBOpenHelper.CEP, voluntario.getCep());
         values.put(VoluntarioDBOpenHelper.CIDADE, voluntario.getCidade());
         values.put(VoluntarioDBOpenHelper.UF, voluntario.getUf());
-        values.put(VoluntarioDBOpenHelper._ID, voluntario.getId());
         values.put(VoluntarioDBOpenHelper.FUNCAO, voluntario.getFuncao());
         values.put(VoluntarioDBOpenHelper.HORARIO_PEGAR, voluntario.getHorario_pegar());
         values.put(VoluntarioDBOpenHelper.HORARIO_LARGAR, voluntario.getHorario_largar());
@@ -134,7 +133,6 @@ public class VoluntarioDBController {
         values.put(VoluntarioDBOpenHelper.CEP, voluntario.getCep());
         values.put(VoluntarioDBOpenHelper.CIDADE, voluntario.getCidade());
         values.put(VoluntarioDBOpenHelper.UF, voluntario.getUf());
-        values.put(VoluntarioDBOpenHelper._ID, voluntario.getId());
         values.put(VoluntarioDBOpenHelper.FUNCAO, voluntario.getFuncao());
         values.put(VoluntarioDBOpenHelper.HORARIO_PEGAR, voluntario.getHorario_pegar());
         values.put(VoluntarioDBOpenHelper.HORARIO_LARGAR, voluntario.getHorario_largar());
@@ -144,8 +142,8 @@ public class VoluntarioDBController {
         values.put(VoluntarioDBOpenHelper.RG, voluntario.getRg());
         values.put(VoluntarioDBOpenHelper.AREA, voluntario.getArea());
 
-        int update = db.update(TABLE_VOLUNTARIO, values, VoluntarioDBOpenHelper._ID + " = ?",
-                new String[]{String.valueOf(voluntario.getId())});
+        int update = db.update(TABLE_VOLUNTARIO, values, VoluntarioDBOpenHelper.NOME + " = ?",
+                new String[]{String.valueOf(voluntario.getNome())});
         db.close();
         return update;
 

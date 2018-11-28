@@ -32,14 +32,14 @@ public class CursoDBController {
             do{
 
                 DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
-                Date date = df.parse(cursor.getString(2));
+                Date date = df.parse(cursor.getString(1));
 
                 DateFormat dft = new SimpleDateFormat("MM/dd/yyyy");
-                Date dat = dft.parse(cursor.getString(3));
+                Date dat = dft.parse(cursor.getString(2));
 
-                Curso cur = new Curso(cursor.getInt(0),cursor.getString(1),date,dat,
-                        cursor.getInt(4),cursor.getString(5),cursor.getString(6),
-                        cursor.getDouble(7),cursor.getDouble(8),cursor.getString(9));
+                Curso cur = new Curso(cursor.getString(0),date,dat,cursor.getInt(3),
+                        cursor.getString(4),cursor.getString(5),cursor.getDouble(6),
+                        cursor.getDouble(7),cursor.getString(8));
 
                 cursoList.add(cur);
             } while (cursor.moveToNext());
@@ -67,7 +67,6 @@ public class CursoDBController {
         SQLiteDatabase db = cursoDB.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put(CursoDBOpenHelper._ID, curso.getId());
         values.put(CursoDBOpenHelper.NOME_CURSO, curso.getNomeCurso());
 
         DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
@@ -109,7 +108,6 @@ public class CursoDBController {
         SQLiteDatabase db = cursoDB.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put(CursoDBOpenHelper._ID, curso.getId());
         values.put(CursoDBOpenHelper.NOME_CURSO, curso.getNomeCurso());
 
         DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
@@ -129,8 +127,8 @@ public class CursoDBController {
         values.put(CursoDBOpenHelper.LARGAR, curso.getLargar());
         values.put(CursoDBOpenHelper.SALA, curso.getSala());
 
-        int update = db.update(TABLE_CURSO, values, CursoDBOpenHelper._ID + " = ?",
-                new String[]{String.valueOf(curso.getId())});
+        int update = db.update(TABLE_CURSO, values, CursoDBOpenHelper.NOME_CURSO + " = ?",
+                new String[]{String.valueOf(curso.getNomeCurso())});
         db.close();
         return update;
 

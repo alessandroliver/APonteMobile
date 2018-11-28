@@ -32,14 +32,14 @@ public class GrDBController {
             do{
 
                 DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
-                Date date = df.parse(cursor.getString(9));
+                Date date = df.parse(cursor.getString(8));
 
-                Gr grs = new Gr(cursor.getInt(0),cursor.getString(1),
-                        cursor.getInt(2),cursor.getDouble(3),cursor.getString(4),
-                        cursor.getString(5),cursor.getString(6),cursor.getString(7),
-                        cursor.getInt(8),date,cursor.getString(10),
-                        cursor.getInt(11),cursor.getString(12), cursor.getInt(13),
-                        cursor.getString(14),cursor.getString(15));
+                Gr grs = new Gr(cursor.getString(0),cursor.getInt(1),
+                        cursor.getDouble(2),cursor.getString(3),cursor.getString(4),
+                        cursor.getString(5),cursor.getString(6),cursor.getInt(7),
+                        date,cursor.getString(9),cursor.getInt(10),
+                        cursor.getString(11), cursor.getInt(12),cursor.getString(13),
+                        cursor.getString(14));
 
                 grList.add(grs);
             } while (cursor.moveToNext());
@@ -67,7 +67,6 @@ public class GrDBController {
         SQLiteDatabase db = grDB.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put(GrDBOpenHelper._ID, gr.getId());
         values.put(GrDBOpenHelper.NOME_GR, gr.getNomeGr());
         values.put(GrDBOpenHelper.QUANTIDADE, gr.getQuantidade());
         values.put(GrDBOpenHelper.HORARIO, gr.getHorario());
@@ -110,7 +109,6 @@ public class GrDBController {
         SQLiteDatabase db = grDB.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put(GrDBOpenHelper._ID, gr.getId());
         values.put(GrDBOpenHelper.NOME_GR, gr.getNomeGr());
         values.put(GrDBOpenHelper.QUANTIDADE, gr.getQuantidade());
         values.put(GrDBOpenHelper.HORARIO, gr.getHorario());
@@ -131,8 +129,8 @@ public class GrDBController {
         values.put(GrDBOpenHelper.CIDADE, gr.getCidade());
         values.put(GrDBOpenHelper.UF, gr.getUf());
 
-        int update = db.update(TABLE_GR, values, GrDBOpenHelper._ID + " = ?",
-                new String[]{String.valueOf(gr.getId())});
+        int update = db.update(TABLE_GR, values, GrDBOpenHelper.NOME_GR + " = ?",
+                new String[]{String.valueOf(gr.getNomeGr())});
         db.close();
         return update;
 

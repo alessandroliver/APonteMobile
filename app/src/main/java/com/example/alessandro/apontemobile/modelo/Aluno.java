@@ -7,7 +7,7 @@ import java.util.Date;
 public class Aluno extends Pessoa implements Serializable {
     private int id;
     private ArrayList<Curso> curso;
-    private int matricula;
+    private String matricula;
     private String farda;
     private String responsavel;
     private String serie;
@@ -15,7 +15,7 @@ public class Aluno extends Pessoa implements Serializable {
 
     public Aluno(String nome, String naturalidade, int celular, Date nascimento, String sexo, double altura,
                  String logradouro, int numero, String bairro, String cep, String cidade, String uf, int id,
-                 ArrayList<Curso> curso, int matricula, String farda, String responsavel, String serie,
+                 ArrayList<Curso> curso, String matricula, String farda, String responsavel, String serie,
                  String escola) {
         super(nome, naturalidade, celular, nascimento, sexo, altura, logradouro, numero, bairro, cep, cidade, uf);
         this.id = id;
@@ -43,11 +43,11 @@ public class Aluno extends Pessoa implements Serializable {
         this.curso = curso;
     }
 
-    public int getMatricula() {
+    public String getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(int matricula) {
+    public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
 

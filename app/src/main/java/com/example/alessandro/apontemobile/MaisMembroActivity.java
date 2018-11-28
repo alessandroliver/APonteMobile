@@ -8,14 +8,18 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 public class MaisMembroActivity extends AppCompatActivity {
 
     private Button maisGr, cadastrarMembro;
-    private EditText celularMembro, nascimentoMembro, alturaMembro, cepMembro, conversaoMembro;
+    private EditText nomeMembro, celularMembro, nascimentoMembro, alturaMembro, naturalidadeMembro, logradouroMembro,
+            numeroMembro, bairroMembro, cepMembro, cidadeMembro, conversaoMembro, equipeMembro, cargoMembro, tempoMembro;
     private TextWatcher celularMark, nascimentoMask, alturaMask, cepMask;
+    private RadioButton radioMMembro, radioFMembro;
+    private Spinner ufMembro, coleteMembro, grMembro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,21 +30,35 @@ public class MaisMembroActivity extends AppCompatActivity {
 
         cadastrarMembro = findViewById(R.id.button_cadastro_membro);
 
-        Spinner spStatesMembro = (Spinner) findViewById(R.id.membro_sp_state);
+        radioMMembro = findViewById(R.id.membroRadioM);
+        radioFMembro = findViewById(R.id.membroRadioF);
+
+        ufMembro = (Spinner) findViewById(R.id.membro_sp_state);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.states, android.R.layout.simple_spinner_item);
-        spStatesMembro.setAdapter(adapter);
+        ufMembro.setAdapter(adapter);
 
-        Spinner spStatesMembro1 = (Spinner) findViewById(R.id.membro_sp_colete);
+        coleteMembro = (Spinner) findViewById(R.id.membro_sp_colete);
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
                 R.array.coletes, android.R.layout.simple_spinner_item);
-        spStatesMembro1.setAdapter(adapter1);
+        coleteMembro.setAdapter(adapter1);
 
-        EditText celularMembro = findViewById(R.id.membro_celular);
-        EditText nascimentoMembro = findViewById(R.id.membro_nascimento);
-        EditText alturaMembro = findViewById(R.id.membro_altura);
-        EditText cepMembro = findViewById(R.id.membro_cep);
-        EditText conversaoMembro = findViewById(R.id.membro_data_conversao);
+        grMembro = (Spinner) findViewById(R.id.sp_membro_gr);
+
+        nomeMembro = findViewById(R.id.membro_nome);
+        celularMembro = findViewById(R.id.membro_celular);
+        nascimentoMembro = findViewById(R.id.membro_nascimento);
+        alturaMembro = findViewById(R.id.membro_altura);
+        naturalidadeMembro = findViewById(R.id.membro_naturalidade);
+        logradouroMembro = findViewById(R.id.membro_logradouro);
+        numeroMembro = findViewById(R.id.membro_numero);
+        bairroMembro = findViewById(R.id.membro_bairro);
+        cepMembro = findViewById(R.id.membro_cep);
+        cidadeMembro = findViewById(R.id.membro_cidade);
+        conversaoMembro = findViewById(R.id.membro_data_conversao);
+        equipeMembro = findViewById(R.id.membro_equipe);
+        cargoMembro = findViewById(R.id.membro_cargo);
+        tempoMembro = findViewById(R.id.membro_tempo_ponte);
 
         celularMark = Mask.insert("(##) #####-####", celularMembro);
         celularMembro.addTextChangedListener(celularMark);

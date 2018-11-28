@@ -44,11 +44,10 @@ public class FuncionarioDBController {
                         cursor.getInt(2),date,cursor.getString(4),cursor.getDouble(5),
                         cursor.getString(6),cursor.getInt(7),cursor.getString(8),
                         cursor.getString(9),cursor.getString(10),cursor.getString(11),
-                        cursor.getInt(12),cursor.getString(13),cursor.getDouble(14),
+                        cursor.getString(12),cursor.getDouble(13),cursor.getInt(14),
                         cursor.getInt(15),cursor.getInt(16),cursor.getInt(17),
-                        cursor.getInt(18),cursor.getInt(19),cursor.getInt(20),
-                        cursor.getString(21),cursor.getInt(22),cursor.getString(23),
-                        dat,dte);
+                        cursor.getInt(18),cursor.getInt(19),cursor.getString(20),
+                        cursor.getInt(21),cursor.getString(22),dat,dte);
 
                 funcionarioList.add(func);
             } while (cursor.moveToNext());
@@ -93,7 +92,6 @@ public class FuncionarioDBController {
         values.put(FuncionarioDBOpenHelper.CEP, funcionario.getCep());
         values.put(FuncionarioDBOpenHelper.CIDADE, funcionario.getCidade());
         values.put(FuncionarioDBOpenHelper.UF, funcionario.getUf());
-        values.put(FuncionarioDBOpenHelper._ID, funcionario.getId());
         values.put(FuncionarioDBOpenHelper.CARGO, funcionario.getCargo());
         values.put(FuncionarioDBOpenHelper.SALARIO, funcionario.getSalario());
         values.put(FuncionarioDBOpenHelper.HORA_SEMANAL, funcionario.getHora_semanal());
@@ -155,7 +153,6 @@ public class FuncionarioDBController {
         values.put(FuncionarioDBOpenHelper.CEP, funcionario.getCep());
         values.put(FuncionarioDBOpenHelper.CIDADE, funcionario.getCidade());
         values.put(FuncionarioDBOpenHelper.UF, funcionario.getUf());
-        values.put(FuncionarioDBOpenHelper._ID, funcionario.getId());
         values.put(FuncionarioDBOpenHelper.CARGO, funcionario.getCargo());
         values.put(FuncionarioDBOpenHelper.SALARIO, funcionario.getSalario());
         values.put(FuncionarioDBOpenHelper.HORA_SEMANAL, funcionario.getHora_semanal());
@@ -178,8 +175,8 @@ public class FuncionarioDBController {
 
         values.put(FuncionarioDBOpenHelper.PAGAMENTO, reportDte);
 
-        int update = db.update(TABLE_FUNCIONARIO, values, FuncionarioDBOpenHelper._ID + " = ?",
-                new String[]{String.valueOf(funcionario.getId())});
+        int update = db.update(TABLE_FUNCIONARIO, values, FuncionarioDBOpenHelper.NOME + " = ?",
+                new String[]{String.valueOf(funcionario.getNome())});
         db.close();
         return update;
 

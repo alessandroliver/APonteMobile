@@ -51,8 +51,8 @@ public class MembroDBOpenHelper extends SQLiteOpenHelper {
     static final String CEPGR = "cepGr";
     static final String CIDADEGR = "cidadeGr";
     static final String UFGR = "ufGr";
-
-    static final String[] COLUNA_GR = {IDGR, NOME_GRGR, QUANTIDADEGR, HORARIOGR, DIAGR, FREQUENCIAGR, LIDERGR,
+    static final String NOME_Gr = "nomeMembroGr";
+    static final String[] COLUNA_GR = {NOME_Gr, IDGR, NOME_GRGR, QUANTIDADEGR, HORARIOGR, DIAGR, FREQUENCIAGR, LIDERGR,
             APOIOGR, CONTATOGR, INAUGURACAOGR, LOGRADOUROGR, NUMEROGR, BAIRROGR, CEPGR, CIDADEGR, UFGR};
     final private Context mContext;
 
@@ -69,11 +69,11 @@ public class MembroDBOpenHelper extends SQLiteOpenHelper {
                 UF + " TEXT," + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + DATA_CONVERSAO + " TEXT," +
                 EQUIPE + " TEXT," + TEMPO_PONTE + " TEXT," + CARGO + " TEXT," + COLETE + " TEXT" + ")";
 
-        String CREATE_TABLE_MEMBRO_GR = "CREATE TABLE " + TABLE_MEMBRO_GR + "(" + IDGR + " INTEGER," +
-                NOME_GRGR + "TEXT," + QUANTIDADEGR + " INTEGER," + HORARIOGR + " REAL," + DIAGR + " TEXT," +
-                FREQUENCIAGR + " TEXT," + LIDERGR + " TEXT," + APOIOGR + " TEXT," + CONTATOGR + " INTEGER," +
-                INAUGURACAOGR + " TEXT," + LOGRADOUROGR + " TEXT," + NUMEROGR + " INTEGER," + BAIRROGR + " TEXT," +
-                CEPGR + " INTEGER," + CIDADEGR + " TEXT," + UFGR + " TEXT" + ")";
+        String CREATE_TABLE_MEMBRO_GR = "CREATE TABLE " + TABLE_MEMBRO_GR + "(" + NOME_Gr + " TEXT," +
+                IDGR + " INTEGER," + NOME_GRGR + "TEXT," + QUANTIDADEGR + " INTEGER," + HORARIOGR + " REAL," +
+                DIAGR + " TEXT," + FREQUENCIAGR + " TEXT," + LIDERGR + " TEXT," + APOIOGR + " TEXT," +
+                CONTATOGR + " INTEGER," + INAUGURACAOGR + " TEXT," + LOGRADOUROGR + " TEXT," + NUMEROGR + " INTEGER," +
+                BAIRROGR + " TEXT," + CEPGR + " INTEGER," + CIDADEGR + " TEXT," + UFGR + " TEXT" + ")";
 
         db.execSQL(CREATE_TABLE);
         db.execSQL(CREATE_TABLE_MEMBRO_GR);

@@ -44,8 +44,9 @@ public class AlunoDBOpenHelper extends SQLiteOpenHelper {
     static final String PEGARCURSO = "pegarCurso";
     static final String LARGARCURSO = "largarCurso";
     static final String SALACURSO = "salaCurso";
-    static final String[]COLUNA_CURSO = {_IDCURSO, NOME_CURSOCURSO, INICIOCURSO, FIMCURSO, CARGA_HORARIACURSO,
-            PROFESSORCURSO, DIACURSO, PEGARCURSO, LARGARCURSO, SALACURSO};
+    static final String MATRICULA_Cur = "matriculaAlunoCurso";
+    static final String[]COLUNA_CURSO = {MATRICULA_Cur, _IDCURSO, NOME_CURSOCURSO, INICIOCURSO, FIMCURSO,
+            CARGA_HORARIACURSO, PROFESSORCURSO, DIACURSO, PEGARCURSO, LARGARCURSO, SALACURSO};
     final private Context mContext;
 
     public AlunoDBOpenHelper(Context context) {
@@ -58,11 +59,11 @@ public class AlunoDBOpenHelper extends SQLiteOpenHelper {
         String CREATE_TABLE = "CREATE TABLE " + TABLE_ALUNO + "(" + NOME + " TEXT," + NATURALIDADE + " TEXT," +
                 CELULAR + "INTEGER," + NASCIMENTO + " TEXT," + SEXO + " TEXT," + ALTURA + " REAL," +
                 LOGRADOURO + " TEXT," + NUMERO + " INTEGER," + BAIRRO + " TEXT," + CEP + " TEXT," + CIDADE + " TEXT," +
-                UF + " TEXT," + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + MATRICULA + " INTEGER," +
+                UF + " TEXT," + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + MATRICULA + " TEXT," +
                 FARDA + " TEXT," + RESPONSAVEL + " TEXT," + SERIE + " TEXT," + ESCOLA + " TEXT" + ")";
 
-        String CREATE_TABLE_ALUNO_CURSO = "CREATE TABLE " + TABLE_ALUNO_CURSO + "(" + _IDCURSO + " INTEGER," +
-                NOME_CURSOCURSO + "TEXT," + INICIOCURSO + " TEXT," + FIMCURSO + " TEXT," +
+        String CREATE_TABLE_ALUNO_CURSO = "CREATE TABLE " + TABLE_ALUNO_CURSO + "(" + MATRICULA_Cur + " TEXT," +
+                _IDCURSO + " INTEGER," + NOME_CURSOCURSO + "TEXT," + INICIOCURSO + " TEXT," + FIMCURSO + " TEXT," +
                 CARGA_HORARIACURSO + " INTEGER," + PROFESSORCURSO + " TEXT," + DIACURSO + " TEXT," +
                 PEGARCURSO + " REAL," + LARGARCURSO + " REAL," + SALACURSO + " TEXT" + ")";
 

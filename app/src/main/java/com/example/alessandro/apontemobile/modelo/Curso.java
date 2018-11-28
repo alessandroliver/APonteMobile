@@ -7,7 +7,6 @@ import java.util.Date;
 import java.util.List;
 
 public class Curso implements Serializable {
-    private int id;
     private String nomeCurso;
     private Date inicio;
     private Date fim;
@@ -18,9 +17,8 @@ public class Curso implements Serializable {
     private double largar;
     private String sala;
 
-    public Curso(int id, String nomeCurso, Date inicio, Date fim, int carga_horaria, String professor, String dia,
+    public Curso(String nomeCurso, Date inicio, Date fim, int carga_horaria, String professor, String dia,
                  double pegar, double largar, String sala) {
-        this.id = id;
         this.nomeCurso = nomeCurso;
         this.inicio = inicio;
         this.fim = fim;
@@ -30,14 +28,6 @@ public class Curso implements Serializable {
         this.pegar = pegar;
         this.largar = largar;
         this.sala = sala;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNomeCurso() {
@@ -114,7 +104,7 @@ public class Curso implements Serializable {
 
     @Override
     public String toString() {
-        return getId() + " - " + getNomeCurso();
+        return getNomeCurso();
     }
 
 }

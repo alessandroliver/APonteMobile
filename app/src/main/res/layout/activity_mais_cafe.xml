@@ -132,11 +132,21 @@
             android:layout_toRightOf="@+id/cafe_validade"
             android:hint="Peso" />
 
+        <EditText
+            android:id="@+id/cafe_id"
+            android:hint="ID"
+            android:inputType="number"
+            android:ems="6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafe_validade"/>
+
         <TextView
             android:id="@+id/titulo_temperatuda"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cafe_validade"
+            android:layout_toRightOf="@+id/cafe_id"
             android:text="Temperatura" />
 
         <Spinner
@@ -150,7 +160,7 @@
             android:id="@+id/button_cadastro_cafe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/titulo_temperatuda"
+            android:layout_below="@+id/cafe_id"
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimaryPonte"
             android:text="Cadastrar"

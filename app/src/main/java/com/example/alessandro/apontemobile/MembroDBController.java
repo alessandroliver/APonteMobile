@@ -50,9 +50,9 @@ public class MembroDBController {
                         cursor.getInt(2),date,cursor.getString(4),
                         cursor.getDouble(5),cursor.getString(6),
                         cursor.getInt(7),cursor.getString(8),cursor.getString(9),
-                        cursor.getString(10),cursor.getString(11),cursor.getInt(12),
-                        dt,cursor.getString(14),cursor.getString(15),
-                        cursor.getString(16),listGr,cursor.getString(17));
+                        cursor.getString(10),cursor.getString(11),dt,
+                        cursor.getString(13),cursor.getString(14),
+                        cursor.getString(15),listGr,cursor.getString(16));
 
                 //adiciona cada aluno resgatado dentro da lista a ser retornada
                 membroList.add(mem);
@@ -107,7 +107,6 @@ public class MembroDBController {
         values.put(MembroDBOpenHelper.CEP, membro.getCep());
         values.put(MembroDBOpenHelper.CIDADE, membro.getCidade());
         values.put(MembroDBOpenHelper.UF, membro.getUf());
-        values.put(MembroDBOpenHelper._ID, membro.getId());
 
         DateFormat dft = new SimpleDateFormat("MM/dd/yyyy");
         String reportDat = dft.format(membro.getData_conversao());
@@ -137,7 +136,7 @@ public class MembroDBController {
         SQLiteDatabase db = membroDB.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put(MembroDBOpenHelper.IDGR, gr.getId());
+        values.put(MembroDBOpenHelper.NOME_Gr, nome);
         values.put(MembroDBOpenHelper.NOME_GRGR, gr.getNomeGr());
         values.put(MembroDBOpenHelper.QUANTIDADEGR, gr.getQuantidade());
         values.put(MembroDBOpenHelper.HORARIOGR, gr.getHorario());
@@ -195,21 +194,16 @@ public class MembroDBController {
 
                 DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
                 Date datei = null;
-                if(cursor.getString(10) != null){
+                if(cursor.getString(9) != null){
                     datei = df.parse(cursor.getString(3));
                 }
 
-                Date datef = null;
-                if(cursor.getString(4) != null){
-                    datef = df.parse(cursor.getString(4));
-                }
-
-                Gr gr = new Gr(cursor.getInt(1),cursor.getString(2),cursor.getInt(3),
-                        cursor.getDouble(4),cursor.getString(5),cursor.getString(6),
-                        cursor.getString(7), cursor.getString(8), cursor.getInt(9),
-                        datei, cursor.getString(11), cursor.getInt(12),
-                        cursor.getString(13), cursor.getInt(14), cursor.getString(15),
-                        cursor.getString(16));
+                Gr gr = new Gr(cursor.getString(1),cursor.getInt(2),
+                        cursor.getDouble(3),cursor.getString(4),cursor.getString(5),
+                        cursor.getString(6), cursor.getString(7), cursor.getInt(8),
+                        datei, cursor.getString(10), cursor.getInt(11),
+                        cursor.getString(12), cursor.getInt(13), cursor.getString(14),
+                        cursor.getString(15));
 
                 //Adiona a disciplina na lista de disciplinas a ser retornada
                 grMembro.add(gr);
@@ -227,11 +221,11 @@ public class MembroDBController {
 
     }
 
-    //retorna um aluno específico por meio de seu cpf
+    //retorna um aluno específico por meio de seu nome
     public Membro getMembro(String nome) throws ParseException {
         SQLiteDatabase db = membroDB.getWritableDatabase();
         Membro membro = null;
-        //retorna apenas um aluno com esse cpf dado
+        //retorna apenas um aluno com esse nome dado
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_MEMBRO
                 + " WHERE nome = '" + nome + "'", new String[] {});
         if(cursor!=null && cursor.getCount() > 0){
@@ -242,7 +236,7 @@ public class MembroDBController {
             Date date = df.parse(cursor.getString(3));
 
             DateFormat dfat = new SimpleDateFormat("MM/dd/yyyy");
-            Date dt = dfat.parse(cursor.getString(13));
+            Date dt = dfat.parse(cursor.getString(12));
 
             List<Gr> listGr = null;
             listGr = getAllGrMembro(nome);
@@ -251,9 +245,9 @@ public class MembroDBController {
                     cursor.getInt(2),date,cursor.getString(4),
                     cursor.getDouble(5),cursor.getString(6),
                     cursor.getInt(7),cursor.getString(8),cursor.getString(9),
-                    cursor.getString(10),cursor.getString(11),cursor.getInt(12),
-                    dt,cursor.getString(14),cursor.getString(15),
-                    cursor.getString(16),listGr,cursor.getString(18));
+                    cursor.getString(10),cursor.getString(11),
+                    dt,cursor.getString(13),cursor.getString(14),
+                    cursor.getString(15),listGr,cursor.getString(16));
 
         }
         return membro;
@@ -267,7 +261,7 @@ public class MembroDBController {
 
         ContentValues values = new ContentValues();
 
-        values.put(MembroDBOpenHelper.IDGR, gr.getId());
+        values.put(MembroDBOpenHelper.NOME_Gr, nome);
         values.put(MembroDBOpenHelper.NOME_GRGR, gr.getNomeGr());
         values.put(MembroDBOpenHelper.QUANTIDADEGR, gr.getQuantidade());
         values.put(MembroDBOpenHelper.HORARIOGR, gr.getHorario());
@@ -317,7 +311,6 @@ public class MembroDBController {
         values.put(MembroDBOpenHelper.CEP, membro.getCep());
         values.put(MembroDBOpenHelper.CIDADE, membro.getCidade());
         values.put(MembroDBOpenHelper.UF, membro.getUf());
-        values.put(MembroDBOpenHelper._ID, membro.getId());
 
         DateFormat dft = new SimpleDateFormat("MM/dd/yyyy");
         String reportDat = dft.format(membro.getData_conversao());

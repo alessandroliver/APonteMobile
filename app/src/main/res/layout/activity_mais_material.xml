@@ -109,11 +109,19 @@
             android:inputType="number"
             android:hint="Quantidade do material" />
 
+        <EditText
+            android:id="@+id/material_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/material_quantidade_material"
+            android:inputType="number"
+            android:hint="ID"/>
+
         <Button
             android:id="@+id/button_cadastro_material"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/material_quantidade_material"
+            android:layout_below="@+id/material_id"
             android:layout_marginTop="10dp"
             android:background="@color/colorPrimaryPonte"
             android:text="Cadastrar"

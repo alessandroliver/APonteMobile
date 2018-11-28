@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Gr implements Serializable {
-    private int id;
     private String nomeGr;
     private int quantidade;
     private double horario;
@@ -21,10 +20,9 @@ public class Gr implements Serializable {
     private String cidade;
     private String uf;
 
-    public Gr(int id, String nomeGr, int quantidade, double horario, String dia, String frequencia, String lider,
+    public Gr(String nomeGr, int quantidade, double horario, String dia, String frequencia, String lider,
               String apoio, int contato, Date inauguracao, String logradouro, int numero, String bairro, int cep,
               String cidade, String uf) {
-        this.id = id;
         this.nomeGr = nomeGr;
         this.quantidade = quantidade;
         this.horario = horario;
@@ -40,14 +38,6 @@ public class Gr implements Serializable {
         this.cep = cep;
         this.cidade = cidade;
         this.uf = uf;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNomeGr() {
@@ -172,6 +162,6 @@ public class Gr implements Serializable {
 
     @Override
     public String toString() {
-        return getId() + " - " + getNomeGr();
+        return getNomeGr();
     }
 }

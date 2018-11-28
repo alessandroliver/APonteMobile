@@ -31,7 +31,6 @@ public class AlunoDBController {
         List<Aluno> alunoList = new ArrayList<Aluno>();
         Cursor cursor = loadItems();
 
-
         if (cursor.moveToFirst()) {
             do {
                 //resgata as informações dos alunos que estão no cursor
@@ -39,17 +38,18 @@ public class AlunoDBController {
                 DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
                 Date date = df.parse(cursor.getString(3));
 
-                String nome = cursor.getString(0);
+                String matricula = cursor.getString(0);
                 List<Curso> listCurso = null;
-                listCurso = getAllCursoAluno(nome);
+                listCurso = getAllCursoAluno(matricula);
 
                 Aluno alu = new Aluno(cursor.getString(0),cursor.getString(1),
                         cursor.getInt(2),date,cursor.getString(4),
                         cursor.getDouble(5),cursor.getString(6),cursor.getInt(7),
                         cursor.getString(8),cursor.getString(9),cursor.getString(10),
                         cursor.getString(11),cursor.getInt(12),listCurso,
-                        cursor.getInt(13),cursor.getString(14),cursor.getString(15),
-                        cursor.getString(16),cursor.getString(17));
+                        cursor.getString(13),cursor.getString(14),
+                        cursor.getString(15),cursor.getString(16),
+                        cursor.getString(17));
 
                 //adiciona cada aluno resgatado dentro da lista a ser retornada
                 alunoList.add(alu);
@@ -126,12 +126,12 @@ public class AlunoDBController {
         }
     }
 
-    public String insertCursoAluno(Curso curso, String nome){
+    public String insertCursoAluno(Curso curso, String matricula){
         long check =0;
         SQLiteDatabase db = alunoDB.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put(AlunoDBOpenHelper._IDCURSO, curso.getId());
+        values.put(AlunoDBOpenHelper.MATRICULA_Cur, matricula);
         values.put(AlunoDBOpenHelper.NOME_CURSOCURSO, curso.getNomeCurso());
 
         DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
@@ -164,11 +164,11 @@ public class AlunoDBController {
 
     //carrega as disciplinas de um aluno específico
 
-    public Cursor loadCursoAluno(String nome){
+    public Cursor loadCursoAluno(String matricula){
         db = alunoDB.getReadableDatabase();
-        //retorna as disciplinas onde o cpf de aluno da tabela é igual ao cpf fornecido
+        //retorna as disciplinas onde o matricula de aluno da tabela é igual ao matricula fornecido
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_ALUNO_CURSO
-                + " WHERE nomeAlunoCurso = '" + nome + "'", new String[] {});
+                + " WHERE natriculaAlunoCurso = '" + matricula + "'", new String[] {});
         if(cursor!=null && cursor.getCount() > 0){
             cursor.moveToFirst();
         }
@@ -176,10 +176,10 @@ public class AlunoDBController {
         return cursor;
     }
 
-    //método que retorna todas as disciplinas de um determinado aluno ( pelo cpf)
-    public List<Curso> getAllCursoAluno(String nome) throws ParseException {
+    //método que retorna todas as disciplinas de um determinado aluno ( pela matricula)
+    public List<Curso> getAllCursoAluno(String matricula) throws ParseException {
         List<Curso> cursoAluno = null;
-        Cursor cursor = loadCursoAluno(nome);
+        Cursor cursor = loadCursoAluno(matricula);
 
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
@@ -187,15 +187,14 @@ public class AlunoDBController {
             do {
 
                 DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
-                Date datei = df.parse(cursor.getString(3));
+                Date datei = df.parse(cursor.getString(2));
 
                 DateFormat dft = new SimpleDateFormat("MM/dd/yyyy");
-                Date datef = dft.parse(cursor.getString(4));
+                Date datef = dft.parse(cursor.getString(3));
 
-                Curso curso = new Curso(cursor.getInt(1),cursor.getString(2),datei,
-                        datef,cursor.getInt(5),cursor.getString(6),
-                        cursor.getString(7), cursor.getDouble(8), cursor.getDouble(9),
-                        cursor.getString(10));
+                Curso curso = new Curso(cursor.getString(1),datei,datef,cursor.getInt(5),
+                        cursor.getString(6),cursor.getString(7),cursor.getDouble(8),
+                        cursor.getDouble(9),cursor.getString(10));
 
                 //Adiona a disciplina na lista de disciplinas a ser retornada
                 cursoAluno.add(curso);
@@ -213,13 +212,13 @@ public class AlunoDBController {
 
     }
 
-    //retorna um aluno específico por meio de seu cpf
-    public Aluno getAlunoCurso(String nome) throws ParseException {
+    //retorna um aluno específico por meio de sua matricula
+    public Aluno getAlunoCurso(String matricula) throws ParseException {
         SQLiteDatabase db = alunoDB.getWritableDatabase();
         Aluno aluno = null;
-        //retorna apenas um aluno com esse cpf dado
+        //retorna apenas um aluno com esse matricula dado
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_ALUNO
-                + " WHERE nome = '" + nome + "'", new String[] {});
+                + " WHERE matricula = '" + matricula + "'", new String[] {});
         if(cursor!=null && cursor.getCount() > 0){
             cursor.moveToFirst();
         }
@@ -231,15 +230,15 @@ public class AlunoDBController {
             Date dt = dfat.parse(cursor.getString(13));
 
             List<Curso> listCurso = null;
-            listCurso = getAllCursoAluno(nome);
+            listCurso = getAllCursoAluno(matricula);
 
             aluno = new Aluno(cursor.getString(0),cursor.getString(1),
-                    cursor.getInt(2),date,cursor.getString(4),
-                    cursor.getDouble(5),cursor.getString(6),
-                    cursor.getInt(7),cursor.getString(8),cursor.getString(9),
-                    cursor.getString(10),cursor.getString(11),cursor.getInt(12),
-                    listCurso,cursor.getInt(13),cursor.getString(14),cursor.getString(15),
-                    cursor.getString(16),cursor.getString(17));
+                    cursor.getInt(2),date,cursor.getString(4),cursor.getDouble(5),
+                    cursor.getString(6),cursor.getInt(7),cursor.getString(8),
+                    cursor.getString(9),cursor.getString(10),cursor.getString(11),
+                    cursor.getInt(12),listCurso,cursor.getString(13),
+                    cursor.getString(14),cursor.getString(15),cursor.getString(16),
+                    cursor.getString(17));
 
         }
         return aluno;
@@ -248,12 +247,12 @@ public class AlunoDBController {
 
     //atualizar disciplina de um aluno
     //usá-se quando o professor atribui as notas
-    public int updateCurso(Curso curso, String nome) {
+    public int updateCurso(Curso curso, String matricula) {
         SQLiteDatabase db = alunoDB.getWritableDatabase();
 
         ContentValues values = new ContentValues();
 
-        values.put(AlunoDBOpenHelper._IDCURSO, curso.getId());
+        values.put(AlunoDBOpenHelper.MATRICULA_Cur, matricula);
         values.put(AlunoDBOpenHelper.NOME_CURSOCURSO, curso.getNomeCurso());
         DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
         String reportDate = df.format(curso.getInicio());
@@ -307,8 +306,8 @@ public class AlunoDBController {
         values.put(AlunoDBOpenHelper.SERIE, aluno.getSerie());
         values.put(AlunoDBOpenHelper.ESCOLA, aluno.getEscola());
 
-        int update = db.update(TABLE_ALUNO, values, AlunoDBOpenHelper.NOME + " = ?",
-                new String[]{String.valueOf(aluno.getNome())});
+        int update = db.update(TABLE_ALUNO, values, AlunoDBOpenHelper.MATRICULA + " = ?",
+                new String[]{String.valueOf(aluno.getMatricula())});
         db.close();
         return update;
 

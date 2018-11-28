@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Funcionario extends Pessoa implements Serializable {
-    private int id;
     private String cargo;
     private double salario;
     private int hora_semanal;
@@ -20,11 +19,10 @@ public class Funcionario extends Pessoa implements Serializable {
     private Date pagamento;
 
     public Funcionario(String nome, String naturalidade, int celular, Date nascimento, String sexo, double altura,
-                       String logradouro, int numero, String bairro, String cep, String cidade, String uf, int id,
+                       String logradouro, int numero, String bairro, String cep, String cidade, String uf,
                        String cargo, double salario, int hora_semanal, int carteira_trabalho, int pis, int cpf,
                        int rg, int conta, String banco, int agencia, String camisa, Date entrada, Date pagamento) {
         super(nome, naturalidade, celular, nascimento, sexo, altura, logradouro, numero, bairro, cep, cidade, uf);
-        this.id = id;
         this.cargo = cargo;
         this.salario = salario;
         this.hora_semanal = hora_semanal;
@@ -38,14 +36,6 @@ public class Funcionario extends Pessoa implements Serializable {
         this.camisa = camisa;
         this.entrada = entrada;
         this.pagamento = pagamento;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getCargo() {
@@ -154,6 +144,6 @@ public class Funcionario extends Pessoa implements Serializable {
 
     @Override
     public String toString() {
-        return getId() + " - " + getNome();
+        return getNome();
     }
 }
