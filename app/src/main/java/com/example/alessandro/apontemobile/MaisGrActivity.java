@@ -105,9 +105,25 @@ public class MaisGrActivity extends AppCompatActivity {
                 Gr gr = new Gr(nomeGr,quantidade,horario,dia,frequencia,lider,apoio,contato,inauguracao,logradouro,
                         numero,bairro,cep,cidade,uf);
 
-                alert("GR cadastrado com sucesso!");
-                Intent intent = new Intent(MaisGrActivity.this, InicioActivity.class);
-                startActivity(intent);
+                if (gr.getNomeGr().equals("") || gr.getQuantidade() == 0 || gr.getHorario() == 0 || gr.getDia().equals("")
+                        || gr.getFrequencia().equals("") || gr.getLider().equals("") || gr.getApoio().equals("") ||
+                        gr.getContato() == 0 || gr.getInauguracao().equals("") || gr.getLogradouro().equals("") ||
+                        gr.getNumero() == 0 || gr.getBairro().equals("") || gr.getCep() == 0 || gr.getCidade().equals("")
+                        || gr.getUf().equals("")){
+                    alert("Preencha todos os campos.");
+                }else {
+                    GrDBController grDBController = new GrDBController(MaisGrActivity.this);
+
+                    /*if(gr.getNomeGr() != null){
+                        grDBController.updateGr(gr);
+                    }else{*/
+                        grDBController.insert(gr);
+                    //}
+
+                    alert("GR cadastrado com sucesso!");
+                    Intent intent = new Intent(MaisGrActivity.this, InicioActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 

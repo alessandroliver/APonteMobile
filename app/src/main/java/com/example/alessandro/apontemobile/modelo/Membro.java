@@ -11,13 +11,12 @@ public class Membro extends Pessoa implements Serializable {
     private String equipe;
     private String tempo_ponte;
     private String cargo;
-    private ArrayList<Gr> gr;
+    private Gr gr;
     private String colete;
 
     public Membro(String nome, String naturalidade, int celular, Date nascimento, String sexo, double altura,
                   String logradouro, int numero, String bairro, String cep, String cidade, String uf,
-                  Date data_conversao, String equipe, String tempo_ponte, String cargo, ArrayList<Gr> gr,
-                  String colete) {
+                  Date data_conversao, String equipe, String tempo_ponte, String cargo, Gr gr, String colete) {
         super(nome, naturalidade, celular, nascimento, sexo, altura, logradouro, numero, bairro, cep, cidade, uf);
         this.data_conversao = data_conversao;
         this.equipe = equipe;
@@ -60,11 +59,11 @@ public class Membro extends Pessoa implements Serializable {
         this.cargo = cargo;
     }
 
-    public ArrayList<Gr> getGr() {
+    public Gr getGr() {
         return gr;
     }
 
-    public void setGr(ArrayList<Gr> gr) {
+    public void setGr(Gr gr) {
         this.gr = gr;
     }
 

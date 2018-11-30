@@ -83,9 +83,21 @@ public class MaisMaterialActivity extends AppCompatActivity {
                 Material material = new Material(id,nomeMaterial,valor,finalidade,garantia,loja,data_compra,validade,
                         tipo,peso,tamanho,quantidadeMaterial);
 
-                alert("Material cadastrado com sucesso!");
-                Intent intent = new Intent(MaisMaterialActivity.this, InicioActivity.class);
-                startActivity(intent);
+                if (material.getId() == 0 || material.getNomeMaterial().equals("") || material.getValor() == 0 ||
+                        material.getFinalidade().equals("") || material.getGarantia().equals("") ||
+                        material.getLoja().equals("") || material.getData_compra().equals("") ||
+                        material.getValidade().equals("") || material.getTipo().equals("") || material.getPeso() == 0 ||
+                        material.getTamanho() == 0 || material.getQuantidadeMaterial() == 0){
+                    alert("Preencha todos os campos.");
+                }else {
+                    MaterialDBController materialDBController = new MaterialDBController(MaisMaterialActivity.this);
+
+                    materialDBController.insert(material);
+
+                    alert("Material cadastrado com sucesso!");
+                    Intent intent = new Intent(MaisMaterialActivity.this, InicioActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 

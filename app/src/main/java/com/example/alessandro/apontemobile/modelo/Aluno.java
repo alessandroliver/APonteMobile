@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Aluno extends Pessoa implements Serializable {
-    private int id;
     private ArrayList<Curso> curso;
     private String matricula;
     private String farda;
@@ -14,25 +13,16 @@ public class Aluno extends Pessoa implements Serializable {
     private String escola;
 
     public Aluno(String nome, String naturalidade, int celular, Date nascimento, String sexo, double altura,
-                 String logradouro, int numero, String bairro, String cep, String cidade, String uf, int id,
+                 String logradouro, int numero, String bairro, String cep, String cidade, String uf,
                  ArrayList<Curso> curso, String matricula, String farda, String responsavel, String serie,
                  String escola) {
         super(nome, naturalidade, celular, nascimento, sexo, altura, logradouro, numero, bairro, cep, cidade, uf);
-        this.id = id;
         this.curso = curso;
         this.matricula = matricula;
         this.farda = farda;
         this.responsavel = responsavel;
         this.serie = serie;
         this.escola = escola;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public ArrayList<Curso> getCurso() {
@@ -85,6 +75,6 @@ public class Aluno extends Pessoa implements Serializable {
 
     @Override
     public String toString() {
-        return getId() + " - " + getNome();
+        return getNome();
     }
 }

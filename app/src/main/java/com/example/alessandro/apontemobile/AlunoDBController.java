@@ -46,9 +46,8 @@ public class AlunoDBController {
                         cursor.getInt(2),date,cursor.getString(4),
                         cursor.getDouble(5),cursor.getString(6),cursor.getInt(7),
                         cursor.getString(8),cursor.getString(9),cursor.getString(10),
-                        cursor.getString(11),cursor.getInt(12),listCurso,
-                        cursor.getString(13),cursor.getString(14),
-                        cursor.getString(15),cursor.getString(16),
+                        cursor.getString(11),listCurso,cursor.getString(13),
+                        cursor.getString(14),cursor.getString(15),cursor.getString(16),
                         cursor.getString(17));
 
                 //adiciona cada aluno resgatado dentro da lista a ser retornada
@@ -104,7 +103,6 @@ public class AlunoDBController {
         values.put(AlunoDBOpenHelper.CEP, aluno.getCep());
         values.put(AlunoDBOpenHelper.CIDADE, aluno.getCidade());
         values.put(AlunoDBOpenHelper.UF, aluno.getUf());
-        values.put(AlunoDBOpenHelper._ID, aluno.getId());
 
         values.put(AlunoDBOpenHelper.MATRICULA, aluno.getMatricula());
         values.put(AlunoDBOpenHelper.FARDA, aluno.getFarda());
@@ -236,9 +234,8 @@ public class AlunoDBController {
                     cursor.getInt(2),date,cursor.getString(4),cursor.getDouble(5),
                     cursor.getString(6),cursor.getInt(7),cursor.getString(8),
                     cursor.getString(9),cursor.getString(10),cursor.getString(11),
-                    cursor.getInt(12),listCurso,cursor.getString(13),
-                    cursor.getString(14),cursor.getString(15),cursor.getString(16),
-                    cursor.getString(17));
+                    listCurso,cursor.getString(12),cursor.getString(13),
+                    cursor.getString(14),cursor.getString(15),cursor.getString(16));
 
         }
         return aluno;
@@ -299,7 +296,6 @@ public class AlunoDBController {
         values.put(AlunoDBOpenHelper.CEP, aluno.getCep());
         values.put(AlunoDBOpenHelper.CIDADE, aluno.getCidade());
         values.put(AlunoDBOpenHelper.UF, aluno.getUf());
-        values.put(AlunoDBOpenHelper._ID, aluno.getId());
         values.put(AlunoDBOpenHelper.MATRICULA, aluno.getMatricula());
         values.put(AlunoDBOpenHelper.FARDA, aluno.getFarda());
         values.put(AlunoDBOpenHelper.RESPONSAVEL, aluno.getResponsavel());

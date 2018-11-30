@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.alessandro.apontemobile.modelo.Gr;
 
+import java.lang.reflect.Array;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -47,6 +48,32 @@ public class GrDBController {
         cursor.close();
 
         return grList;
+    }
+
+    public Gr getGr(String nomeGR) throws ParseException {
+        Gr gr = null;
+        Cursor cursor = loadItens();
+        if (cursor.moveToFirst()){
+            do{
+
+                if (cursor.getString(0).equals(nomeGR)) {
+
+                    DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+                    Date date = df.parse(cursor.getString(8));
+
+                    gr = new Gr(cursor.getString(0), cursor.getInt(1),
+                            cursor.getDouble(2), cursor.getString(3), cursor.getString(4),
+                            cursor.getString(5), cursor.getString(6), cursor.getInt(7),
+                            date, cursor.getString(9), cursor.getInt(10),
+                            cursor.getString(11), cursor.getInt(12), cursor.getString(13),
+                            cursor.getString(14));
+
+                }
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+
+        return gr;
     }
 
     public Cursor loadItens(){

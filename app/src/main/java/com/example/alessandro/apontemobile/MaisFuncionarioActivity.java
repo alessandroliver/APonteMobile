@@ -191,9 +191,29 @@ public class MaisFuncionarioActivity extends AppCompatActivity {
                         numero,bairro,cep,cidade,uf,cargo,salario,hora_semanal,carteira_trabalho,pis,cpf,rg,conta,
                         banco,agencia,camisa,entrada,pagamento);
 
-                alert("Funcionário cadastrado com sucesso!");
-                Intent intent = new Intent(MaisFuncionarioActivity.this, InicioActivity.class);
-                startActivity(intent);
+                if (funcionario.getNome().equals("") || funcionario.getNaturalidade().equals("") ||
+                        funcionario.getCelular() == 0 || funcionario.getNascimento().equals("") ||
+                        funcionario.getSexo().equals("") || funcionario.getAltura() == 0 ||
+                        funcionario.getLogradouro().equals("") || funcionario.getNumero() == 0 ||
+                        funcionario.getBairro().equals("") || funcionario.getCep().equals("") ||
+                        funcionario.getCidade().equals("") || funcionario.getUf().equals("") ||
+                        funcionario.getCargo().equals("") || funcionario.getSalario() == 0 ||
+                        funcionario.getHora_semanal() == 0 || funcionario.getCarteira_trabalho() == 0 ||
+                        funcionario.getPis() == 0 || funcionario.getCpf() == 0 || funcionario.getRg() == 0 ||
+                        funcionario.getConta() == 0 || funcionario.getBanco().equals("") || funcionario.getAgencia() == 0
+                        || funcionario.getCamisa().equals("") || funcionario.getEntrada().equals("") ||
+                        funcionario.getPagamento().equals("")){
+                    alert("Preencha todos os campos.");
+                } else {
+                    FuncionarioDBController funcionarioDBController = new FuncionarioDBController
+                            (MaisFuncionarioActivity.this);
+
+                    funcionarioDBController.insert(funcionario);
+
+                    alert("Funcionário cadastrado com sucesso!");
+                    Intent intent = new Intent(MaisFuncionarioActivity.this, InicioActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 

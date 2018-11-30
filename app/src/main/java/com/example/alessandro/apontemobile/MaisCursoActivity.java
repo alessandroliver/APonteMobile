@@ -82,9 +82,19 @@ public class MaisCursoActivity extends AppCompatActivity {
 
                 Curso curso = new Curso(nomeCurso,inicio,fim,carga_horaria,professor,dia,pegar,largar,sala);
 
-                alert("Curso cadastrado com sucesso!");
-                Intent intent = new Intent(MaisCursoActivity.this, InicioActivity.class);
-                startActivity(intent);
+                if (curso.getNomeCurso().equals("") || curso.getInicio().equals("") || curso.getFim().equals("") ||
+                        curso.getCarga_horaria() == 0 || curso.getProfessor().equals("") || curso.getDia().equals("") ||
+                        curso.getPegar() == 0 || curso.getLargar() == 0 || curso.getSala().equals("")){
+                    alert("Preencha todos os campos.");
+                }else {
+                    CursoDBController cursoDBController = new CursoDBController(MaisCursoActivity.this);
+
+                    cursoDBController.insert(curso);
+
+                    alert("Curso cadastrado com sucesso!");
+                    Intent intent = new Intent(MaisCursoActivity.this, InicioActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 

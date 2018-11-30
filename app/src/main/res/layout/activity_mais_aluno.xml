@@ -168,12 +168,12 @@
             android:layout_below="@+id/formulario_cidade"
             android:text="Curso: "/>
 
-        <Spinner
+        <!--<Spinner
             android:id="@+id/sp_aluno_curso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/aluno_curso"
-            android:layout_below="@+id/formulario_cidade" />
+            android:layout_below="@+id/formulario_cidade" />-->
 
         <!--<Button
             android:id="@+id/button_cursos"

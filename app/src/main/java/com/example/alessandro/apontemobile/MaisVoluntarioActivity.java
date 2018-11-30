@@ -147,9 +147,27 @@ public class MaisVoluntarioActivity extends AppCompatActivity {
                         numero,bairro,cep,cidade,uf,funcao,horario_pegar,horario_largar,hora_semanal,tamanho_camisa,
                         cpf,rg,area);
 
-                alert("Voluntário cadastrado com sucesso!");
-                Intent intent = new Intent(MaisVoluntarioActivity.this, InicioActivity.class);
-                startActivity(intent);
+                if (voluntario.getNome().equals("") || voluntario.getNaturalidade().equals("") ||
+                        voluntario.getCelular() == 0 || voluntario.getNascimento().equals("") ||
+                        voluntario.getSexo().equals("") || voluntario.getAltura() == 0 ||
+                        voluntario.getLogradouro().equals("") || voluntario.getNumero() == 0 ||
+                        voluntario.getBairro().equals("") || voluntario.getCep().equals("") ||
+                        voluntario.getCidade().equals("") || voluntario.getUf().equals("") ||
+                        voluntario.getFuncao().equals("") ||voluntario.getHorario_pegar() == 0 ||
+                        voluntario.getHorario_largar() == 0 || voluntario.getHora_semanal() == 0 ||
+                        voluntario.getTamanho_camisa().equals("") || voluntario.getCpf() == 0 || voluntario.getRg() == 0
+                        || voluntario.getArea().equals("")){
+                    alert("Preencha todos os campos.");
+                }else {
+                    VoluntarioDBController voluntarioDBController = new VoluntarioDBController
+                            (MaisVoluntarioActivity.this);
+
+                    voluntarioDBController.insert(voluntario);
+
+                    alert("Voluntário cadastrado com sucesso!");
+                    Intent intent = new Intent(MaisVoluntarioActivity.this, InicioActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 

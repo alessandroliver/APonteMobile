@@ -92,9 +92,20 @@ public class MaisShopActivity extends AppCompatActivity {
                 Shop shop = new Shop(nomeProduto,valor_compra,valor_venda,quantidade,loja,local_fabricacao,data_compra,
                         marca,id,tipo,cor,data_fabricacao);
 
-                alert("Produto da Ponte Shop cadastrado com sucesso!");
-                Intent intent = new Intent(MaisShopActivity.this, InicioActivity.class);
-                startActivity(intent);
+                if (shop.getNomeProduto().equals("") || shop.getValor_compra() == 0 || shop.getValor_venda() == 0 ||
+                        shop.getQuantidade() == 0 || shop.getLoja().equals("") || shop.getLocal_fabricacao().equals("") ||
+                        shop.getData_compra().equals("") || shop.getMarca().equals("") || shop.getId() == 0 ||
+                        shop.getTipo().equals("") || shop.getCor().equals("") || shop.getData_fabricacao().equals("")){
+                    alert("Preencha todos os campos.");
+                }else {
+                    ShopDBController shopDBController = new ShopDBController(MaisShopActivity.this);
+
+                    shopDBController.insert(shop);
+
+                    alert("Produto da Ponte Shop cadastrado com sucesso!");
+                    Intent intent = new Intent(MaisShopActivity.this, InicioActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 

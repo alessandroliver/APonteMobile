@@ -96,9 +96,21 @@ public class MaisCafeActivity extends AppCompatActivity {
                 Cafe cafe = new Cafe(nomeProduto, valor_compra, valor_venda, quantidade, loja, local_fabricacao,
                         data_compra, marca, id, sabor, temperatura, ingrediente, validade, peso);
 
-                alert("Produto da Ponte Café cadastrado com sucesso!");
-                Intent intent = new Intent(MaisCafeActivity.this, InicioActivity.class);
-                startActivity(intent);
+                if (cafe.getNomeProduto().equals("") || cafe.getValor_compra() == 0 || cafe.getValor_venda() == 0 ||
+                        cafe.getQuantidade() == 0 || cafe.getLoja().equals("") || cafe.getLocal_fabricacao().equals("") ||
+                        cafe.getData_compra().equals("") || cafe.getMarca().equals("") || cafe.getId() == 0 ||
+                        cafe.getSabor().equals("") || cafe.getTemperatura().equals("") || cafe.getIngrediente().equals("")
+                        || cafe.getValidade().equals("") || cafe.getPeso() == 0){
+                    alert("Preencha todos os campos.");
+                } else {
+                    CafeDBController cafeDBController = new CafeDBController(MaisCafeActivity.this);
+
+                    cafeDBController.insert(cafe);
+
+                    alert("Produto da Ponte Café cadastrado com sucesso!");
+                    Intent intent = new Intent(MaisCafeActivity.this, InicioActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
