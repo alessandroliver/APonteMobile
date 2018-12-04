@@ -61,7 +61,7 @@
             android:ems="9"
             android:layout_below="@+id/gr_apoio"
             android:layout_toRightOf="@+id/gr_dia"
-            android:inputType="time"
+            android:inputType="numberDecimal"
             android:hint="Horário" />
 
         <EditText
@@ -153,16 +153,6 @@
             android:ems="12"
             android:inputType="date"
             android:hint="Inauguração" />
-
-        <Button
-            android:id="@+id/button_cadastro_gr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/gr_inauguracao"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorPrimaryPonte"
-            android:text="Cadastrar"
-            android:textColor="#fff" />
 
     </RelativeLayout>
 

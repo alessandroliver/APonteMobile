@@ -1,22 +1,11 @@
 <resources>
     <string name="app_name">A Ponte Mobile</string>
-    <string name="title_activity_inicial">InicialActivity</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Cabeçalho de navegação</string>
-    <string name="action_settings">Configurações</string>
-    <string name="title_activity_aluno">Aluno</string>
-    <string name="title_activity_cafe">Ponte Café</string>
-    <string name="title_activity_curso">Cursos</string>
-    <string name="title_activity_funcionario">Funcionários</string>
-    <string name="title_activity_gr">Grupos de Relacionamento</string>
-    <string name="title_activity_material">Material</string>
-    <string name="title_activity_membro">Membresia</string>
-    <string name="title_activity_shop">Ponte Shop</string>
-    <string name="title_activity_voluntario">Voluntariado</string>
-    <string name="title_activity_programacao">Programação</string>
+    <string-array name="temperatura">
+        <item>""</item>
+        <item>"Quente"</item>
+        <item>"Frio"</item>
+        <item>"Gelado"</item>
+    </string-array>
     <string-array name="states">
         <item>"UF"</item>
         <item>"PE"</item>
@@ -61,18 +50,19 @@
         <item>"M"</item>
         <item>"G"</item>
     </string-array>
-    <string-array name="temperatura">
-        <item>""</item>
-        <item>"Quente"</item>
-        <item>"Frio"</item>
-        <item>"Gelado"</item>
-    </string-array>
     <string-array name="grs">
         <item>""</item>
-        <item>"getNomeGr"</item>
+        <item>"Centro"</item>
+        <item>"Candeias"</item>
     </string-array>
-    <string-array name="cursos">
+    <string-array name="alunos">
         <item>""</item>
-        <item>"getNomeCurso"</item>
+        <item>"Paulo"</item>
+        <item>"Pedro"</item>
+    </string-array>
+    <string-array name="turnos">
+        <item>""</item>
+        <item>"Manhã"</item>
+        <item>"Tarde"</item>
     </string-array>
 </resources>

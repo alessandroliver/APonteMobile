@@ -29,8 +29,7 @@
         android:textColor="#ffffff"
         android:background="@color/colorPrimaryPonte"
         android:layout_below="@+id/somos"
-        android:layout_marginTop="50sp"
-        />
+        android:layout_marginTop="50sp"/>
 
     <Button
         android:id="@+id/voluntario"
@@ -42,7 +41,7 @@
         android:background="@color/colorPrimaryPonte"
         android:text="Voluntário"
         android:textColor="#ffffff"
-        android:layout_alignRight="@+id/somos" />
+        android:layout_alignRight="@+id/somos"/>
 
     <Button
         android:id="@+id/aluno"
@@ -52,8 +51,7 @@
         android:textColor="#ffffff"
         android:background="@color/colorPrimaryPonte"
         android:layout_below="@+id/voluntario"
-        android:layout_marginTop="30sp"
-        />
+        android:layout_marginTop="30sp"/>
 
     <Button
         android:id="@+id/funcionario"
@@ -65,7 +63,8 @@
         android:layout_marginTop="-48dp"
         android:background="@color/colorPrimaryPonte"
         android:text="Funcionário"
-        android:textColor="#ffffff" />
+        android:textSize="12dp"
+        android:textColor="#ffffff"/>
 
     <Button
         android:id="@+id/shop"
@@ -75,8 +74,7 @@
         android:textColor="#ffffff"
         android:background="@color/colorPrimaryPonte"
         android:layout_below="@+id/funcionario"
-        android:layout_marginTop="30sp"
-        />
+        android:layout_marginTop="30sp"/>
 
     <Button
         android:id="@+id/cafe"
@@ -87,7 +85,7 @@
         android:background="@color/colorPrimaryPonte"
         android:text="Ponte Café"
         android:textColor="#ffffff"
-        android:layout_alignRight="@+id/somos" />
+        android:layout_alignRight="@+id/somos"/>
 
     <Button
         android:id="@+id/gr"
@@ -97,8 +95,7 @@
         android:textColor="#ffffff"
         android:background="@color/colorPrimaryPonte"
         android:layout_below="@+id/cafe"
-        android:layout_marginTop="30sp"
-        />
+        android:layout_marginTop="30sp"/>
 
     <Button
         android:id="@+id/material"
@@ -110,7 +107,7 @@
         android:background="@color/colorPrimaryPonte"
         android:text="Material"
         android:textColor="#ffffff"
-        android:layout_alignRight="@+id/somos" />
+        android:layout_alignRight="@+id/somos"/>
 
     <Button
         android:id="@+id/curso"
@@ -120,7 +117,7 @@
         android:layout_marginTop="30dp"
         android:background="@color/colorPrimaryPonte"
         android:text="Curso"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"/>
 
     <Button
         android:id="@+id/sair"
@@ -132,6 +129,6 @@
         android:layout_marginTop="-48dp"
         android:background="@color/colorPrimaryPonte"
         android:text="Sair"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"/>
 
 </RelativeLayout>

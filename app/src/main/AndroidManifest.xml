@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.alessandro.apontemobile">
+    package="com.example.alessandro.myapplication">
 
     <application
         android:allowBackup="true"
@@ -9,9 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InicioActivity" />
-        <activity
-            android:name=".SplashActivity"
+        <activity android:name=".ListaCafeActivity" />
+        <activity android:name=".MaisCafeActivity" />
+        <activity android:name=".ListaGrActivity" />
+        <activity android:name=".MaisGrActivity" />
+        <activity android:name=".ListaShopActivity" />
+        <activity android:name=".MaisShopActivity" />
+        <activity android:name=".ListaMaterialActivity" />
+        <activity android:name=".MaisMaterialActivity" />
+        <activity android:name=".ListaVoluntarioActivity" />
+        <activity android:name=".MaisVoluntarioActivity" />
+        <activity android:name=".ListaFuncionarioActivity" />
+        <activity android:name=".MaisFuncionarioActivity" />
+        <activity android:name=".ListaMembroActivity" />
+        <activity android:name=".MaisMembroActivity" />
+        <activity android:name=".ListaCursoActivity" />
+        <activity android:name=".MaisCursoActivity" />
+        <activity android:name=".ListaAlunoActivity"></activity>
+        <activity android:name=".MaisAlunoActivity" />
+        <activity android:name=".InicioActivity">
+        </activity>
+        <activity android:name=".SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,48 +37,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MembroActivity"
-            android:label="@string/title_activity_membro" />
-        <activity
-            android:name=".VoluntarioActivity"
-            android:label="@string/title_activity_voluntario" />
-        <activity
-            android:name=".AlunoActivity"
-            android:label="@string/title_activity_aluno" />
-        <activity
-            android:name=".FuncionarioActivity"
-            android:label="@string/title_activity_funcionario" />
-        <activity
-            android:name=".ShopActivity"
-            android:label="@string/title_activity_shop" />
-        <activity
-            android:name=".CafeActivity"
-            android:label="@string/title_activity_cafe" />
-        <activity
-            android:name=".GrActivity"
-            android:label="@string/title_activity_gr" />
-        <activity
-            android:name=".MaterialActivity"
-            android:label="@string/title_activity_material" />
-        <activity android:name=".MaisAlunoActivity" />
-        <activity android:name=".MaisCafeActivity" />
-        <activity android:name=".MaisFuncionarioActivity" />
-        <activity android:name=".MaisGrActivity" />
-        <activity android:name=".MaisMaterialActivity" />
-        <activity android:name=".MaisMembroActivity" />
-        <activity android:name=".MaisShopActivity" />
-        <activity android:name=".MaisVoluntarioActivity" />
-        <activity
-            android:name=".CursoActivity"
-            android:label="@string/title_activity_curso" />
-        <activity android:name=".MaisCursoActivity" />
-        <activity
-            android:name=".PopActivity"
-            android:theme="@style/AppTheme.PopMe" />
-        <activity
-            android:name=".PopGrActivity"
-            android:theme="@style/AppTheme.PopMe" />
     </application>
 
 </manifest>

@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/membro_nome"
-            android:inputType="phone"
+            android:inputType="number"
             android:ems="9"
             android:hint="Telefone" />
 
@@ -46,14 +46,14 @@
             android:ems="9"
             android:hint="Data de nascimento"
             android:layout_toRightOf="@+id/membro_celular"
-            android:inputType="date" />
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/membro_altura"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="6"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:layout_below="@+id/membro_celular"
             android:hint="Altura" />
 
@@ -161,7 +161,7 @@
             android:layout_below="@+id/membro_cidade"
             android:ems="11"
             android:hint="Data da conversão"
-            android:inputType="date" />
+            android:inputType="number" />
 
         <TextView
             android:id="@+id/membro_colete"
@@ -202,6 +202,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
             android:layout_below="@+id/membro_equipe"
             android:text="GR: "/>
 
@@ -212,16 +213,6 @@
             android:layout_toRightOf="@+id/membro_gr"
             android:layout_below="@+id/membro_equipe" />
 
-        <!--<Button
-            android:id="@+id/button_gr"
-            android:text="GR"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:background="@color/colorPrimaryPonte"
-            android:layout_marginLeft="5dp"
-            android:layout_below="@+id/membro_equipe" />-->
-
         <EditText
             android:id="@+id/membro_tempo_ponte"
             android:layout_width="wrap_content"
@@ -229,17 +220,8 @@
             android:layout_below="@+id/membro_gr"
             android:ems="10"
             android:hint="Tempo na Ponte"
-            android:inputType="text" />
-
-        <Button
-            android:id="@+id/button_cadastro_membro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/membro_tempo_ponte"
             android:layout_marginTop="10dp"
-            android:background="@color/colorPrimaryPonte"
-            android:text="Cadastrar"
-            android:textColor="#fff" />
+            android:inputType="text" />
 
     </RelativeLayout>
 

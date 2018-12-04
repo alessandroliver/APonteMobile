@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/voluntario_nome"
-            android:inputType="phone"
+            android:inputType="number"
             android:ems="9"
             android:hint="Telefone" />
 
@@ -46,14 +46,14 @@
             android:ems="9"
             android:hint="Data de nascimento"
             android:layout_toRightOf="@+id/voluntario_celular"
-            android:inputType="date" />
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/voluntario_altura"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="6"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:layout_below="@+id/voluntario_celular"
             android:hint="Altura" />
 
@@ -199,7 +199,7 @@
             android:ems="10"
             android:layout_below="@+id/voluntario_area"
             android:hint="Hora Semanal"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <TextView
             android:id="@+id/voluntario_camisa"
@@ -222,7 +222,7 @@
             android:layout_height="wrap_content"
             android:ems="9"
             android:layout_below="@+id/voluntario_hora_semanal"
-            android:inputType="text"
+            android:inputType="numberDecimal"
             android:hint="Início Expediente" />
 
         <EditText
@@ -232,18 +232,8 @@
             android:layout_below="@+id/voluntario_hora_semanal"
             android:ems="9"
             android:hint="Fim Expediente"
-            android:inputType="text"
+            android:inputType="numberDecimal"
             android:layout_toRightOf="@+id/voluntario_horario_pegar" />
-
-        <Button
-            android:id="@+id/button_cadastro_voluntario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/voluntario_horario_pegar"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorPrimaryPonte"
-            android:text="Cadastrar"
-            android:textColor="#fff" />
 
     </RelativeLayout>
 

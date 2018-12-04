@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/shop_marca"
-            android:inputType="text"
+            android:inputType="numberDecimal"
             android:ems="9"
             android:hint="Valor de compra" />
 
@@ -62,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/shop_marca"
-            android:inputType="text"
+            android:inputType="numberDecimal"
             android:ems="9"
             android:layout_toRightOf="@+id/shop_valor_compra"
             android:hint="Valor de venda" />
@@ -81,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/shop_valor_compra"
-            android:inputType="date"
+            android:inputType="number"
             android:ems="8"
             android:layout_toRightOf="@+id/shop_local_fabricacao"
             android:hint="Data de compra" />
@@ -100,7 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/shop_local_fabricacao"
-            android:inputType="date"
+            android:inputType="number"
             android:ems="7"
             android:layout_toRightOf="@+id/shop_tipo"
             android:hint="Quantidade" />
@@ -119,28 +119,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/shop_cor"
-            android:inputType="date"
+            android:inputType="number"
             android:ems="12"
             android:hint="Data de fabricação" />
-
-        <EditText
-            android:id="@+id/shop_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/shop_data_fabricacao"
-            android:inputType="number"
-            android:ems="10"
-            android:hint="ID" />
-
-        <Button
-            android:id="@+id/button_cadastro_shop"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/shop_id"
-            android:layout_marginTop="20dp"
-            android:background="@color/colorPrimaryPonte"
-            android:text="Cadastrar"
-            android:textColor="#fff" />
 
     </RelativeLayout>
 

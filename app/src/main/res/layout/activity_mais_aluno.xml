@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/formulario_nome"
-            android:inputType="phone"
+            android:inputType="number"
             android:ems="9"
             android:hint="Telefone" />
 
@@ -45,14 +45,14 @@
             android:ems="9"
             android:hint="Data de nascimento"
             android:layout_toRightOf="@+id/formulario_celular"
-            android:inputType="date" />
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/formulario_altura"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="6"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:layout_below="@+id/formulario_celular"
             android:hint="Altura" />
 
@@ -160,38 +160,11 @@
             android:layout_toRightOf="@+id/formulario_cidade"
             android:layout_below="@+id/formulario_bairro" />
 
-        <TextView
-            android:id="@+id/aluno_curso"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_below="@+id/formulario_cidade"
-            android:text="Curso: "/>
-
-        <!--<Spinner
-            android:id="@+id/sp_aluno_curso"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/aluno_curso"
-            android:layout_below="@+id/formulario_cidade" />-->
-
-        <!--<Button
-            android:id="@+id/button_cursos"
-            android:text="Adicionar Curso"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:background="@color/colorPrimaryPonte"
-            android:layout_marginLeft="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:layout_below="@+id/formulario_cidade" />-->
-
         <EditText
             android:id="@+id/formulario_matricula"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/aluno_curso"
+            android:layout_below="@+id/formulario_cidade"
             android:hint="Matrícula"
             android:ems="10"
             android:inputType="number" />
@@ -201,7 +174,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/formulario_matricula"
-            android:layout_below="@+id/aluno_curso"
+            android:layout_below="@+id/formulario_cidade"
             android:layout_marginLeft="28dp"
             android:text="Farda"/>
 
@@ -210,7 +183,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/titulo_tamanho"
-            android:layout_below="@+id/aluno_curso" />
+            android:layout_below="@+id/formulario_cidade" />
 
         <EditText
             android:id="@+id/formulario_escola"
@@ -226,19 +199,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="5"
+            android:inputType="text"
             android:layout_toRightOf="@+id/formulario_escola"
             android:layout_below="@+id/formulario_matricula"
             android:hint="Série"/>
 
-        <Button
-            android:id="@+id/button_cadastro_aluno"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/aluno_curso"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_marginTop="11dp"
             android:layout_below="@+id/formulario_escola"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorPrimaryPonte"
-            android:text="Cadastrar"
-            android:textColor="#fff" />
+            android:text="Cursos: "/>
+
+        <Spinner
+            android:id="@+id/sp_aluno_curso1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/aluno_curso"
+            android:layout_below="@+id/formulario_escola" />
+
+        <Spinner
+            android:id="@+id/sp_aluno_curso2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/sp_aluno_curso1"
+            android:layout_below="@+id/formulario_escola" />
 
     </RelativeLayout>
 

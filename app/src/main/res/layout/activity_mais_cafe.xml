@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cafe_marca"
-            android:inputType="text"
+            android:inputType="numberDecimal"
             android:ems="9"
             android:hint="Valor de compra" />
 
@@ -62,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cafe_marca"
-            android:inputType="text"
+            android:inputType="numberDecimal"
             android:ems="9"
             android:layout_toRightOf="@+id/cafe_valor_compra"
             android:hint="Valor de venda" />
@@ -81,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cafe_valor_compra"
-            android:inputType="date"
+            android:inputType="number"
             android:ems="8"
             android:layout_toRightOf="@+id/cafe_local_fabricacao"
             android:hint="Data de compra" />
@@ -127,26 +127,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cafe_ingrediente"
-            android:inputType="date"
+            android:inputType="numberDecimal"
             android:ems="7"
             android:layout_toRightOf="@+id/cafe_validade"
             android:hint="Peso" />
-
-        <EditText
-            android:id="@+id/cafe_id"
-            android:hint="ID"
-            android:inputType="number"
-            android:ems="6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/cafe_validade"/>
 
         <TextView
             android:id="@+id/titulo_temperatuda"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cafe_validade"
-            android:layout_toRightOf="@+id/cafe_id"
             android:text="Temperatura" />
 
         <Spinner
@@ -155,16 +145,6 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/titulo_temperatuda"
             android:layout_below="@+id/cafe_validade" />
-
-        <Button
-            android:id="@+id/button_cadastro_cafe"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/cafe_id"
-            android:layout_marginTop="20dp"
-            android:background="@color/colorPrimaryPonte"
-            android:text="Cadastrar"
-            android:textColor="#fff" />
 
     </RelativeLayout>
 

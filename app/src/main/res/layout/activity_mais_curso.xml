@@ -44,7 +44,7 @@
             android:ems="9"
             android:layout_below="@+id/curso_professor"
             android:hint="Data Início"
-            android:inputType="date"/>
+            android:inputType="number"/>
 
         <EditText
             android:id="@+id/curso_fim"
@@ -54,7 +54,7 @@
             android:layout_below="@+id/curso_professor"
             android:layout_toRightOf="@+id/curso_inicio"
             android:hint="Data Fim"
-            android:inputType="date"/>
+            android:inputType="number"/>
 
         <EditText
             android:id="@+id/curso_dia"
@@ -101,15 +101,20 @@
             android:layout_below="@+id/curso_pegar"
             android:hint="Carga Horária"/>
 
-        <Button
-            android:id="@+id/button_cadastro_curso"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/curso_turno"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:layout_below="@+id/curso_carga_horaria"
-            android:layout_marginTop="15dp"
-            android:background="@color/colorPrimaryPonte"
-            android:text="Cadastrar"
-            android:textColor="#fff"/>
+            android:text="Turno: "/>
+
+        <Spinner
+            android:id="@+id/sp_curso_turno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/curso_turno"
+            android:layout_below="@+id/curso_carga_horaria" />
 
     </RelativeLayout>
 

@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MaisFuncionarioActivity">
+    tools:context=".MaisMaterialActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/material_nome"
             android:hint="Valor"
-            android:inputType="text"/>
+            android:inputType="numberDecimal"/>
 
         <EditText
             android:id="@+id/material_loja"
@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/material_loja"
-            android:inputType="date"
+            android:inputType="number"
             android:hint="Data da Compra" />
 
         <EditText
@@ -90,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/material_finalidade"
-            android:inputType="text"
+            android:inputType="numberDecimal"
             android:hint="Peso do material" />
 
         <EditText
@@ -98,7 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/material_peso"
-            android:inputType="text"
+            android:inputType="numberDecimal"
             android:hint="Tamanho do material" />
 
         <EditText
@@ -108,24 +108,6 @@
             android:layout_below="@+id/material_tamanho"
             android:inputType="number"
             android:hint="Quantidade do material" />
-
-        <EditText
-            android:id="@+id/material_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/material_quantidade_material"
-            android:inputType="number"
-            android:hint="ID"/>
-
-        <Button
-            android:id="@+id/button_cadastro_material"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/material_id"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorPrimaryPonte"
-            android:text="Cadastrar"
-            android:textColor="#fff" />
 
     </RelativeLayout>
 

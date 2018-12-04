@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/funcionario_nome"
-            android:inputType="phone"
+            android:inputType="number"
             android:ems="9"
             android:hint="Telefone" />
 
@@ -46,14 +46,14 @@
             android:ems="9"
             android:hint="Data de nascimento"
             android:layout_toRightOf="@+id/funcionario_celular"
-            android:inputType="date" />
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/funcionario_altura"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="6"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:layout_below="@+id/funcionario_celular"
             android:hint="Altura" />
 
@@ -171,7 +171,7 @@
             android:ems="7"
             android:hint="Salário"
             android:layout_toRightOf="@+id/funcionario_cargo"
-            android:inputType="text" />
+            android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/funcionario_rg"
@@ -247,7 +247,7 @@
             android:ems="8"
             android:hint="Data Pagamento"
             android:layout_toRightOf="@+id/funcionario_agencia"
-            android:inputType="date" />
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/funcionario_entrada"
@@ -256,7 +256,7 @@
             android:layout_below="@+id/funcionario_agencia"
             android:ems="10"
             android:hint="Data Entrada"
-            android:inputType="date" />
+            android:inputType="number" />
 
         <TextView
             android:id="@+id/funcionario_camisa"
@@ -281,16 +281,6 @@
             android:ems="10"
             android:hint="Hora Semanal"
             android:inputType="number" />
-
-        <Button
-            android:id="@+id/button_cadastro_funcionario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/funcionario_hora_semanal"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorPrimaryPonte"
-            android:text="Cadastrar"
-            android:textColor="#fff" />
 
     </RelativeLayout>
 
