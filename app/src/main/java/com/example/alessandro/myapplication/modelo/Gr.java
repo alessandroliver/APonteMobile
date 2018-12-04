@@ -1,6 +1,7 @@
 package com.example.alessandro.myapplication.modelo;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Gr implements Serializable {
@@ -21,6 +22,7 @@ public class Gr implements Serializable {
     private int cep;
     private String cidade;
     private String uf;
+    private ArrayList<Membro> membros = new ArrayList<Membro>();
 
     public long getId() {
         return id;
@@ -148,6 +150,14 @@ public class Gr implements Serializable {
 
     public void setUf(String uf) {
         this.uf = uf;
+    }
+
+    public ArrayList<Membro> getMembros() {
+        return membros;
+    }
+
+    public void setMembros(ArrayList<Membro> membros) {
+        this.membros = membros;
     }
 
     @Override

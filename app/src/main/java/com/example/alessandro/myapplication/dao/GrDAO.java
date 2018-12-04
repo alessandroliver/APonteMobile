@@ -153,6 +153,7 @@ public class GrDAO extends SQLiteOpenHelper {
             gr.setCep(c.getInt(c.getColumnIndex("cep")));
             gr.setCidade(c.getString(c.getColumnIndex("cidade")));
             gr.setUf(c.getString(c.getColumnIndex("uf")));
+            gr.setMembros(null);
             grs.add(gr);
         }
         c.close();
