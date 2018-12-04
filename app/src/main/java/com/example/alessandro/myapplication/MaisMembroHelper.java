@@ -124,7 +124,7 @@ public class MaisMembroHelper {
         return membro;
     }
 
-    public String getNomeCurso(){
+    public String getNomeGr(){
         return campoGr.getSelectedItem().toString();
     }
 

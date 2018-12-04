@@ -102,7 +102,7 @@ public class MaisMembroActivity extends AppCompatActivity {
                     dao.altera(membro);
                 }else{
                     GrDAO grDAO = new GrDAO(this);
-                    grDAO.insereMembroGr(membro, helper.getNomeCurso());
+                    grDAO.insereMembroGr(membro, helper.getNomeGr());
                     dao.insere(membro);
                 }
 
